@@ -91,7 +91,7 @@
             this.WhoIsSingin_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.WhoIsSingin_Text.Font = new System.Drawing.Font("Roboto", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WhoIsSingin_Text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
-            this.WhoIsSingin_Text.Location = new System.Drawing.Point(245, 61);
+            this.WhoIsSingin_Text.Location = new System.Drawing.Point(245, 79);
             this.WhoIsSingin_Text.Name = "WhoIsSingin_Text";
             this.WhoIsSingin_Text.Size = new System.Drawing.Size(336, 43);
             this.WhoIsSingin_Text.TabIndex = 15;

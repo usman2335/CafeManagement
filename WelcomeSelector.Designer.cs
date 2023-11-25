@@ -41,7 +41,7 @@
             this.WhoIsLogin_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.WhoIsLogin_Text.Font = new System.Drawing.Font("Roboto", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WhoIsLogin_Text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
-            this.WhoIsLogin_Text.Location = new System.Drawing.Point(249, 63);
+            this.WhoIsLogin_Text.Location = new System.Drawing.Point(249, 79);
             this.WhoIsLogin_Text.Name = "WhoIsLogin_Text";
             this.WhoIsLogin_Text.Size = new System.Drawing.Size(336, 43);
             this.WhoIsLogin_Text.TabIndex = 1;
