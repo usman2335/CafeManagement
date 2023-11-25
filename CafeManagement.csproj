@@ -58,6 +58,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="WelcomeSelectorSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeSelectorSignIn.Designer.cs">
+      <DependentUpon>WelcomeSelectorSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeSelector.Designer.cs">
+      <DependentUpon>WelcomeSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeSelector.resx">
+      <DependentUpon>WelcomeSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeSelectorSignIn.resx">
+      <DependentUpon>WelcomeSelectorSignIn.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

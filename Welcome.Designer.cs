@@ -38,11 +38,11 @@
             // 
             this.welcomeText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.welcomeText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.welcomeText.Font = new System.Drawing.Font("Yu Gothic UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeText.Font = new System.Drawing.Font("Roboto", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.welcomeText.Location = new System.Drawing.Point(218, 105);
             this.welcomeText.Name = "welcomeText";
-            this.welcomeText.Size = new System.Drawing.Size(336, 47);
+            this.welcomeText.Size = new System.Drawing.Size(351, 43);
             this.welcomeText.TabIndex = 0;
             this.welcomeText.Text = "Rozan-e-Taleem Café";
             this.welcomeText.TextChanged += new System.EventHandler(this.welcomeText_TextChanged);
@@ -51,7 +51,7 @@
             // 
             this.loginABtn.AutoSize = true;
             this.loginABtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
-            this.loginABtn.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginABtn.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginABtn.ForeColor = System.Drawing.Color.MistyRose;
             this.loginABtn.Location = new System.Drawing.Point(185, 187);
             this.loginABtn.Name = "loginABtn";
@@ -64,7 +64,7 @@
             // loginCBtn
             // 
             this.loginCBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
-            this.loginCBtn.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.loginCBtn.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginCBtn.ForeColor = System.Drawing.Color.MistyRose;
             this.loginCBtn.Location = new System.Drawing.Point(409, 187);
             this.loginCBtn.Name = "loginCBtn";
@@ -77,7 +77,7 @@
             // signupBtn
             // 
             this.signupBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
-            this.signupBtn.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.signupBtn.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signupBtn.ForeColor = System.Drawing.Color.MistyRose;
             this.signupBtn.Location = new System.Drawing.Point(283, 255);
             this.signupBtn.Name = "signupBtn";
