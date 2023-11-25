@@ -63,6 +63,16 @@ namespace CafeManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Brown_Simple_Round_Badge_Coffee_Shop_Logo-removebg-preview-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wp5615275_4k_minimal_anime_wallpapers {
             get {
                 object obj = ResourceManager.GetObject("wp5615275-4k-minimal-anime-wallpapers", resourceCulture);

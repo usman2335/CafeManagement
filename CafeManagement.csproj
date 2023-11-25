@@ -113,5 +113,8 @@
   <ItemGroup>
     <None Include="Resources\wp5615275-4k-minimal-anime-wallpapers.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Brown_Simple_Round_Badge_Coffee_Shop_Logo-removebg-preview-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

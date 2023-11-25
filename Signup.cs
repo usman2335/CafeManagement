@@ -33,6 +33,10 @@ namespace CafeManagement
         {
 
         }
+        private void Fname_Click(object sender, MouseEventArgs e)
+        {
+            this.Fname.Text = "";
+        }
 
         private void LName_TextChanged(object sender, EventArgs e)
         {
@@ -123,6 +127,11 @@ namespace CafeManagement
             this.Hide();
             Login login = new Login();
             login.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
