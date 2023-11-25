@@ -50,11 +50,11 @@
             // 
             this.SignupText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.SignupText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SignupText.Font = new System.Drawing.Font("Yu Gothic UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignupText.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
             this.SignupText.Location = new System.Drawing.Point(364, 42);
             this.SignupText.Name = "SignupText";
-            this.SignupText.Size = new System.Drawing.Size(106, 39);
+            this.SignupText.Size = new System.Drawing.Size(106, 35);
             this.SignupText.TabIndex = 1;
             this.SignupText.Text = "Sign Up";
             this.SignupText.TextChanged += new System.EventHandler(this.welcomeText_TextChanged);
@@ -114,11 +114,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
-            this.label1.Location = new System.Drawing.Point(212, 125);
+            this.label1.Location = new System.Drawing.Point(214, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.Size = new System.Drawing.Size(81, 18);
             this.label1.TabIndex = 7;
             this.label1.Text = "First Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -126,11 +126,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Roboto Light", 11.25F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
             this.label2.Location = new System.Drawing.Point(212, 173);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 20);
+            this.label2.Size = new System.Drawing.Size(81, 18);
             this.label2.TabIndex = 7;
             this.label2.Text = "Last Name";
             this.label2.Click += new System.EventHandler(this.label1_Click);
@@ -138,11 +138,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Roboto Light", 11.25F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
             this.label3.Location = new System.Drawing.Point(212, 218);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.Size = new System.Drawing.Size(76, 18);
             this.label3.TabIndex = 7;
             this.label3.Text = "Username";
             this.label3.Click += new System.EventHandler(this.label1_Click);
@@ -150,11 +150,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Roboto Light", 11.25F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
             this.label4.Location = new System.Drawing.Point(212, 264);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 20);
+            this.label4.Size = new System.Drawing.Size(73, 18);
             this.label4.TabIndex = 7;
             this.label4.Text = "Password";
             this.label4.Click += new System.EventHandler(this.label1_Click);
@@ -162,11 +162,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Roboto Light", 11.25F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
             this.label5.Location = new System.Drawing.Point(159, 310);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 20);
+            this.label5.Size = new System.Drawing.Size(133, 18);
             this.label5.TabIndex = 7;
             this.label5.Text = "Re-enter Password";
             this.label5.Click += new System.EventHandler(this.label1_Click);
@@ -174,7 +174,7 @@
             // createAccountBtn
             // 
             this.createAccountBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
-            this.createAccountBtn.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createAccountBtn.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createAccountBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(231)))));
             this.createAccountBtn.Location = new System.Drawing.Point(337, 345);
             this.createAccountBtn.Name = "createAccountBtn";
@@ -187,22 +187,22 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
-            this.label6.Location = new System.Drawing.Point(343, 94);
+            this.label6.Location = new System.Drawing.Point(350, 94);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 15);
+            this.label6.Size = new System.Drawing.Size(146, 14);
             this.label6.TabIndex = 13;
             this.label6.Text = "Sign up for a new account";
             // 
             // signinLabel
             // 
             this.signinLabel.AutoSize = true;
-            this.signinLabel.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signinLabel.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signinLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(73)))), ((int)(((byte)(148)))));
-            this.signinLabel.Location = new System.Drawing.Point(471, 400);
+            this.signinLabel.Location = new System.Drawing.Point(461, 401);
             this.signinLabel.Name = "signinLabel";
-            this.signinLabel.Size = new System.Drawing.Size(48, 15);
+            this.signinLabel.Size = new System.Drawing.Size(47, 14);
             this.signinLabel.TabIndex = 15;
             this.signinLabel.TabStop = true;
             this.signinLabel.Text = "Sign in!";
@@ -211,11 +211,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Yu Gothic UI Semilight", 8.5F, System.Drawing.FontStyle.Italic);
+            this.label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
-            this.label7.Location = new System.Drawing.Point(330, 400);
+            this.label7.Location = new System.Drawing.Point(332, 402);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 15);
+            this.label7.Size = new System.Drawing.Size(133, 13);
             this.label7.TabIndex = 14;
             this.label7.Text = "Already have an account?";
             this.label7.Click += new System.EventHandler(this.label7_Click);
