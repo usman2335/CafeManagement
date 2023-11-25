@@ -43,6 +43,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.signinLabel = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SignupText
@@ -219,12 +220,22 @@
             this.label7.Text = "Already have an account?";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(674, 169);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.signinLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -265,5 +276,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel signinLabel;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }

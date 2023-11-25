@@ -67,5 +67,10 @@ namespace CafeManagement
             Signup signup = new Signup();
             signup.Show();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

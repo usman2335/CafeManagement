@@ -49,5 +49,10 @@ namespace CafeManagement
             this.Hide();
             form.Show();
         }
+
+        private void Welcome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

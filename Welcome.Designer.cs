@@ -100,6 +100,7 @@
             this.Controls.Add(this.welcomeText);
             this.Name = "Welcome";
             this.Text = "Welcome";
+            this.Load += new System.EventHandler(this.Welcome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
