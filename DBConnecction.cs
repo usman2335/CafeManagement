@@ -14,5 +14,9 @@ namespace CafeManagement
             SqlConnection conn = new SqlConnection(@"Data Source=USMAN\SQLEXPRESS;Initial Catalog=CafeManagement;Integrated Security=True");
             return conn;
         }
+        public static void CloseConnection(SqlConnection conn)
+        {
+            conn.Close();
+        }
     }
 }
