@@ -45,7 +45,7 @@
             // 
             this.passwordTxt.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F);
             this.passwordTxt.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.passwordTxt.Location = new System.Drawing.Point(54, 302);
+            this.passwordTxt.Location = new System.Drawing.Point(54, 341);
             this.passwordTxt.Multiline = true;
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(216, 30);
@@ -56,7 +56,7 @@
             // 
             this.usernameTxt.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F);
             this.usernameTxt.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.usernameTxt.Location = new System.Drawing.Point(54, 218);
+            this.usernameTxt.Location = new System.Drawing.Point(54, 257);
             this.usernameTxt.Multiline = true;
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.Size = new System.Drawing.Size(216, 30);
@@ -68,7 +68,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(50, 195);
+            this.label1.Location = new System.Drawing.Point(50, 234);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 18);
             this.label1.TabIndex = 12;
@@ -80,7 +80,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(50, 279);
+            this.label2.Location = new System.Drawing.Point(50, 318);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 18);
             this.label2.TabIndex = 12;
@@ -93,7 +93,7 @@
             this.label4.BackColor = System.Drawing.Color.Snow;
             this.label4.Font = new System.Drawing.Font("Lato Light", 14F);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(50, 158);
+            this.label4.Location = new System.Drawing.Point(50, 197);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 24);
             this.label4.TabIndex = 12;
@@ -111,7 +111,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(414, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(388, 580);
+            this.panel1.Size = new System.Drawing.Size(391, 691);
             this.panel1.TabIndex = 14;
             // 
             // welcomeText1
@@ -130,7 +130,7 @@
             this.createAccountBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
             this.createAccountBtn.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
             this.createAccountBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(231)))));
-            this.createAccountBtn.Location = new System.Drawing.Point(54, 358);
+            this.createAccountBtn.Location = new System.Drawing.Point(54, 397);
             this.createAccountBtn.Name = "createAccountBtn";
             this.createAccountBtn.Size = new System.Drawing.Size(216, 43);
             this.createAccountBtn.TabIndex = 11;
@@ -171,7 +171,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
-            this.ClientSize = new System.Drawing.Size(800, 580);
+            this.ClientSize = new System.Drawing.Size(800, 652);
             this.Controls.Add(this.loginCBtn);
             this.Controls.Add(this.welcomeText1);
             this.Controls.Add(this.panel1);

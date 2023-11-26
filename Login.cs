@@ -67,6 +67,12 @@ namespace CafeManagement
                     invManager.Show();
                 }
 
+                else if(role == "Admin")
+                {
+                    CafeManager cafeManager = new CafeManager();
+                    this.Hide();
+                    cafeManager.Show();
+                }
               
             }
             else

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CafeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CafeManager.Designer.cs">
+      <DependentUpon>CafeManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cashier.cs">
       <SubType>Form</SubType>
     </Compile>

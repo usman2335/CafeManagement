@@ -42,11 +42,11 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.phoneTxt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.loginCBtn = new System.Windows.Forms.Button();
             this.welcomeText1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             // 
             this.Fname.Font = new System.Drawing.Font("Roboto Light", 9F);
             this.Fname.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.Fname.Location = new System.Drawing.Point(57, 126);
+            this.Fname.Location = new System.Drawing.Point(58, 162);
             this.Fname.Multiline = true;
             this.Fname.Name = "Fname";
             this.Fname.Size = new System.Drawing.Size(237, 30);
@@ -66,7 +66,7 @@
             // 
             this.LName.Font = new System.Drawing.Font("Roboto Light", 9F);
             this.LName.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.LName.Location = new System.Drawing.Point(57, 190);
+            this.LName.Location = new System.Drawing.Point(58, 226);
             this.LName.Multiline = true;
             this.LName.Name = "LName";
             this.LName.Size = new System.Drawing.Size(237, 30);
@@ -77,7 +77,7 @@
             // 
             this.usernameTxt.Font = new System.Drawing.Font("Roboto Light", 9F);
             this.usernameTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.usernameTxt.Location = new System.Drawing.Point(59, 254);
+            this.usernameTxt.Location = new System.Drawing.Point(60, 290);
             this.usernameTxt.Multiline = true;
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.Size = new System.Drawing.Size(237, 30);
@@ -88,7 +88,7 @@
             // 
             this.passwordTxt.Font = new System.Drawing.Font("Roboto Light", 9F);
             this.passwordTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.passwordTxt.Location = new System.Drawing.Point(59, 316);
+            this.passwordTxt.Location = new System.Drawing.Point(60, 352);
             this.passwordTxt.Multiline = true;
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(237, 30);
@@ -99,7 +99,7 @@
             // 
             this.reEnterPassword.Font = new System.Drawing.Font("Roboto Light", 9F);
             this.reEnterPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.reEnterPassword.Location = new System.Drawing.Point(59, 388);
+            this.reEnterPassword.Location = new System.Drawing.Point(60, 424);
             this.reEnterPassword.Multiline = true;
             this.reEnterPassword.Name = "reEnterPassword";
             this.reEnterPassword.Size = new System.Drawing.Size(237, 30);
@@ -112,7 +112,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label1.Location = new System.Drawing.Point(56, 105);
+            this.label1.Location = new System.Drawing.Point(57, 141);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 18);
             this.label1.TabIndex = 7;
@@ -124,7 +124,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label2.Location = new System.Drawing.Point(56, 169);
+            this.label2.Location = new System.Drawing.Point(57, 205);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 18);
             this.label2.TabIndex = 7;
@@ -136,7 +136,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label3.Location = new System.Drawing.Point(61, 233);
+            this.label3.Location = new System.Drawing.Point(62, 269);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 18);
             this.label3.TabIndex = 7;
@@ -148,7 +148,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label4.Location = new System.Drawing.Point(61, 295);
+            this.label4.Location = new System.Drawing.Point(62, 331);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 18);
             this.label4.TabIndex = 7;
@@ -160,7 +160,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label5.Location = new System.Drawing.Point(61, 363);
+            this.label5.Location = new System.Drawing.Point(62, 399);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(138, 18);
             this.label5.TabIndex = 7;
@@ -172,7 +172,7 @@
             this.createAccountBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
             this.createAccountBtn.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
             this.createAccountBtn.ForeColor = System.Drawing.Color.White;
-            this.createAccountBtn.Location = new System.Drawing.Point(57, 503);
+            this.createAccountBtn.Location = new System.Drawing.Point(58, 539);
             this.createAccountBtn.Name = "createAccountBtn";
             this.createAccountBtn.Size = new System.Drawing.Size(239, 43);
             this.createAccountBtn.TabIndex = 8;
@@ -189,7 +189,7 @@
             "Customer",
             "Cashier",
             "Inventory Manager"});
-            this.comboBox1.Location = new System.Drawing.Point(182, 71);
+            this.comboBox1.Location = new System.Drawing.Point(183, 107);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(195, 21);
             this.comboBox1.TabIndex = 16;
@@ -200,7 +200,7 @@
             // 
             this.phoneTxt.Font = new System.Drawing.Font("Roboto Light", 9F);
             this.phoneTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.phoneTxt.Location = new System.Drawing.Point(59, 454);
+            this.phoneTxt.Location = new System.Drawing.Point(60, 490);
             this.phoneTxt.Multiline = true;
             this.phoneTxt.Name = "phoneTxt";
             this.phoneTxt.Size = new System.Drawing.Size(237, 30);
@@ -227,8 +227,31 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(411, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(389, 580);
+            this.panel1.Size = new System.Drawing.Size(389, 656);
             this.panel1.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label6.Location = new System.Drawing.Point(62, 469);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(122, 18);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Contact Number";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Snow;
+            this.label9.Font = new System.Drawing.Font("Lato Light", 14F);
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(54, 84);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 24);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Sign Up";
             // 
             // loginCBtn
             // 
@@ -269,35 +292,12 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Already Have An Account?";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Snow;
-            this.label9.Font = new System.Drawing.Font("Lato Light", 14F);
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(55, 68);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 24);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Sign Up";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label6.Location = new System.Drawing.Point(61, 433);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 18);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Contact Number";
-            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
-            this.ClientSize = new System.Drawing.Size(800, 580);
+            this.ClientSize = new System.Drawing.Size(800, 652);
             this.Controls.Add(this.loginCBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.welcomeText1);

@@ -73,11 +73,11 @@
             // welcomeText1
             // 
             this.welcomeText1.AutoSize = true;
-            this.welcomeText1.Font = new System.Drawing.Font("Roboto", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeText1.Font = new System.Drawing.Font("Lato Black", 27.75F, System.Drawing.FontStyle.Bold);
             this.welcomeText1.ForeColor = System.Drawing.Color.White;
             this.welcomeText1.Location = new System.Drawing.Point(516, 141);
             this.welcomeText1.Name = "welcomeText1";
-            this.welcomeText1.Size = new System.Drawing.Size(164, 42);
+            this.welcomeText1.Size = new System.Drawing.Size(175, 45);
             this.welcomeText1.TabIndex = 4;
             this.welcomeText1.Text = "About Us";
             this.welcomeText1.Click += new System.EventHandler(this.label1_Click);
@@ -119,7 +119,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Roboto Thin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lato Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(442, 199);
             this.label1.Name = "label1";
