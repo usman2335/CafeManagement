@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.welcomeText = new System.Windows.Forms.TextBox();
-            this.loginABtn = new System.Windows.Forms.Button();
             this.loginCBtn = new System.Windows.Forms.Button();
             this.signupBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -47,30 +46,16 @@
             this.welcomeText.Text = "Rozan-e-Taleem Café";
             this.welcomeText.TextChanged += new System.EventHandler(this.welcomeText_TextChanged);
             // 
-            // loginABtn
-            // 
-            this.loginABtn.AutoSize = true;
-            this.loginABtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
-            this.loginABtn.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginABtn.ForeColor = System.Drawing.Color.MistyRose;
-            this.loginABtn.Location = new System.Drawing.Point(185, 187);
-            this.loginABtn.Name = "loginABtn";
-            this.loginABtn.Size = new System.Drawing.Size(187, 46);
-            this.loginABtn.TabIndex = 1;
-            this.loginABtn.Text = "Login As Admin";
-            this.loginABtn.UseVisualStyleBackColor = false;
-            this.loginABtn.Click += new System.EventHandler(this.loginBtn_Click);
-            // 
             // loginCBtn
             // 
             this.loginCBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
             this.loginCBtn.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginCBtn.ForeColor = System.Drawing.Color.MistyRose;
-            this.loginCBtn.Location = new System.Drawing.Point(409, 187);
+            this.loginCBtn.Location = new System.Drawing.Point(283, 192);
             this.loginCBtn.Name = "loginCBtn";
             this.loginCBtn.Size = new System.Drawing.Size(187, 46);
             this.loginCBtn.TabIndex = 2;
-            this.loginCBtn.Text = "Login As Customer";
+            this.loginCBtn.Text = "Login";
             this.loginCBtn.UseVisualStyleBackColor = false;
             this.loginCBtn.Click += new System.EventHandler(this.loginCBtn_Click);
             // 
@@ -96,7 +81,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.signupBtn);
             this.Controls.Add(this.loginCBtn);
-            this.Controls.Add(this.loginABtn);
             this.Controls.Add(this.welcomeText);
             this.Name = "Welcome";
             this.Text = "Welcome";
@@ -109,7 +93,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox welcomeText;
-        private System.Windows.Forms.Button loginABtn;
         private System.Windows.Forms.Button loginCBtn;
         private System.Windows.Forms.Button signupBtn;
     }
