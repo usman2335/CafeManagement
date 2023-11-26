@@ -26,5 +26,15 @@ namespace CafeManagement
         {
 
         }
+
+        private void CashierLog_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustomerLog_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

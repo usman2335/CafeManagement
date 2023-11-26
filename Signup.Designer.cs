@@ -45,6 +45,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.phoneTxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,6 @@
             this.Fname.TabIndex = 2;
             this.Fname.Text = "Enter First Name";
             this.Fname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Fname_Click);
-            this.Fname.TextChanged += new System.EventHandler(this.Fname_TextChanged);
             // 
             // LName
             // 
@@ -84,7 +84,7 @@
             this.LName.Size = new System.Drawing.Size(237, 30);
             this.LName.TabIndex = 3;
             this.LName.Text = "Enter Last Name";
-            this.LName.TextChanged += new System.EventHandler(this.LName_TextChanged);
+            this.LName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LName_TextChanged);
             // 
             // usernameTxt
             // 
@@ -96,6 +96,7 @@
             this.usernameTxt.Size = new System.Drawing.Size(237, 30);
             this.usernameTxt.TabIndex = 4;
             this.usernameTxt.Text = "Enter Username";
+            this.usernameTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.usernameTxt_click);
             // 
             // passwordTxt
             // 
@@ -107,6 +108,7 @@
             this.passwordTxt.Size = new System.Drawing.Size(237, 30);
             this.passwordTxt.TabIndex = 5;
             this.passwordTxt.Text = "Enter Password";
+            this.passwordTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.passwordTxt_click);
             // 
             // reEnterPassword
             // 
@@ -118,6 +120,7 @@
             this.reEnterPassword.Size = new System.Drawing.Size(237, 30);
             this.reEnterPassword.TabIndex = 6;
             this.reEnterPassword.Text = "Re-enter Password";
+            this.reEnterPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rePasswordTxt_click);
             // 
             // label1
             // 
@@ -235,8 +238,8 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Customer",
-            "Employee",
-            "Manager"});
+            "Cashier",
+            "Inventory Manager"});
             this.comboBox1.Location = new System.Drawing.Point(564, 127);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(195, 21);
@@ -253,6 +256,18 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
+            // 
+            // phoneTxt
+            // 
+            this.phoneTxt.Font = new System.Drawing.Font("Roboto Light", 9F);
+            this.phoneTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.phoneTxt.Location = new System.Drawing.Point(565, 309);
+            this.phoneTxt.Multiline = true;
+            this.phoneTxt.Name = "phoneTxt";
+            this.phoneTxt.Size = new System.Drawing.Size(237, 30);
+            this.phoneTxt.TabIndex = 2;
+            this.phoneTxt.Text = "Enter Phone Number";
+            this.phoneTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Fname_TextChanged);
             // 
             // Signup
             // 
@@ -275,6 +290,7 @@
             this.Controls.Add(this.passwordTxt);
             this.Controls.Add(this.usernameTxt);
             this.Controls.Add(this.LName);
+            this.Controls.Add(this.phoneTxt);
             this.Controls.Add(this.Fname);
             this.Controls.Add(this.SignupText);
             this.Name = "Signup";
@@ -305,5 +321,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox phoneTxt;
     }
 }

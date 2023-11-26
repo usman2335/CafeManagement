@@ -31,7 +31,7 @@
             this.WhoIsLogin_Text = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.CustomerLog_button = new System.Windows.Forms.Button();
-            this.EmployeeLog_button = new System.Windows.Forms.Button();
+            this.CashierLog_button = new System.Windows.Forms.Button();
             this.ManagerLog_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -71,19 +71,21 @@
             this.CustomerLog_button.TabIndex = 4;
             this.CustomerLog_button.Text = "Login As Customer";
             this.CustomerLog_button.UseVisualStyleBackColor = false;
+            this.CustomerLog_button.Click += new System.EventHandler(this.CustomerLog_button_Click);
             // 
-            // EmployeeLog_button
+            // CashierLog_button
             // 
-            this.EmployeeLog_button.AutoSize = true;
-            this.EmployeeLog_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
-            this.EmployeeLog_button.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeLog_button.ForeColor = System.Drawing.Color.MistyRose;
-            this.EmployeeLog_button.Location = new System.Drawing.Point(308, 245);
-            this.EmployeeLog_button.Name = "EmployeeLog_button";
-            this.EmployeeLog_button.Size = new System.Drawing.Size(187, 46);
-            this.EmployeeLog_button.TabIndex = 3;
-            this.EmployeeLog_button.Text = "Login As Employee";
-            this.EmployeeLog_button.UseVisualStyleBackColor = false;
+            this.CashierLog_button.AutoSize = true;
+            this.CashierLog_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
+            this.CashierLog_button.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CashierLog_button.ForeColor = System.Drawing.Color.MistyRose;
+            this.CashierLog_button.Location = new System.Drawing.Point(308, 245);
+            this.CashierLog_button.Name = "CashierLog_button";
+            this.CashierLog_button.Size = new System.Drawing.Size(187, 46);
+            this.CashierLog_button.TabIndex = 3;
+            this.CashierLog_button.Text = "Login As Cashier";
+            this.CashierLog_button.UseVisualStyleBackColor = false;
+            this.CashierLog_button.Click += new System.EventHandler(this.CashierLog_button_Click);
             // 
             // ManagerLog_button
             // 
@@ -107,7 +109,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.CustomerLog_button);
-            this.Controls.Add(this.EmployeeLog_button);
+            this.Controls.Add(this.CashierLog_button);
             this.Controls.Add(this.ManagerLog_button);
             this.Controls.Add(this.WhoIsLogin_Text);
             this.Name = "Form2";
@@ -122,7 +124,7 @@
         private System.Windows.Forms.TextBox WhoIsLogin_Text;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button CustomerLog_button;
-        private System.Windows.Forms.Button EmployeeLog_button;
+        private System.Windows.Forms.Button CashierLog_button;
         private System.Windows.Forms.Button ManagerLog_button;
     }
 }
