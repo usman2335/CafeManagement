@@ -51,8 +51,13 @@ namespace CafeManagement
             string type = comboBox1.Text;
             String roleQuery = "Select top 1 userID from Users order by userID desc";
             String userInsert = "Insert into Users(userID,username,password,role) values (@userID,@roleUsername,@rolePassword,@roleRole)";
+            conn.Open();
             cm = new SqlCommand(roleQuery, conn);
+
             int userid = Convert.ToInt32(cm.ExecuteScalar());
+            userid++;
+
+            conn.Close();
             DateTime date = DateTime.Today;
             if (password != reEnter)
             {

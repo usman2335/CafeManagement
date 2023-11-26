@@ -40,14 +40,34 @@ namespace CafeManagement
         {
             conn.Open();
             string username = usernameTxt.Text, password = passwordTxt.Text;
-            String query = "Select * from Customer Where username = '" + usernameTxt.Text + "' AND password = '" + passwordTxt.Text + "'";
+            String query = "Select * from Users Where username = '" + usernameTxt.Text + "' AND password = '" + passwordTxt.Text + "'";
+            String roleQuery = "Select role from Users Where username = '" + usernameTxt.Text + "' AND password = '" + passwordTxt.Text + "'";
+            cm = new SqlCommand(roleQuery, conn);
+            string role = Convert.ToString(cm.ExecuteScalar());
             cm = new SqlCommand(query, conn);
             SqlDataReader dr = cm.ExecuteReader();
             if(dr.HasRows)
             {
-                Customer customer = new Customer();
-                this.Close();
-                customer.Show();
+                if(role == "Customer")
+                {
+                    Customer customer = new Customer();
+                    this.Close();
+                    customer.Show();
+                }
+                else if(role == "Cashier")
+                {
+                    Cashier cashier = new Cashier();
+                    this.Close();
+                    cashier.Show();
+                }
+                else if(role == "Inventory Manager")
+                {
+                    InventoryManager invManager = new InventoryManager();
+                    this.Close();
+                    invManager.Show();
+                }
+
+              
             }
             else
             {

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier.Designer.cs">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryManager.Designer.cs">
+      <DependentUpon>InventoryManager.cs</DependentUpon>
     </Compile>
     <Compile Include="WelcomeSelectorSignIn.cs">
       <SubType>Form</SubType>
