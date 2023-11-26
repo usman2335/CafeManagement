@@ -77,6 +77,18 @@
     <Compile Include="InventoryManager.Designer.cs">
       <DependentUpon>InventoryManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlaceOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaceOrder.Designer.cs">
+      <DependentUpon>PlaceOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomeSelectorSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +121,15 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cashier.resx">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryManager.resx">
+      <DependentUpon>InventoryManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +173,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Brown_Simple_Round_Badge_Coffee_Shop_Logo-removebg-preview-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="drew-coffman-jUOaONoXJQk-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="michal-parzuchowski-ItaV89TNkks-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hans-vivek-uhS6_xCNE8A-unsplash.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

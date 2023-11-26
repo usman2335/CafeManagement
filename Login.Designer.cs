@@ -34,8 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.welcomeText1 = new System.Windows.Forms.Label();
             this.createAccountBtn = new System.Windows.Forms.Button();
+            this.welcomeText1 = new System.Windows.Forms.Label();
             this.loginCBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -113,17 +113,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(391, 691);
             this.panel1.TabIndex = 14;
-            // 
-            // welcomeText1
-            // 
-            this.welcomeText1.AutoSize = true;
-            this.welcomeText1.Font = new System.Drawing.Font("Lato Black", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeText1.ForeColor = System.Drawing.Color.Snow;
-            this.welcomeText1.Location = new System.Drawing.Point(42, 236);
-            this.welcomeText1.Name = "welcomeText1";
-            this.welcomeText1.Size = new System.Drawing.Size(331, 45);
-            this.welcomeText1.TabIndex = 15;
-            this.welcomeText1.Text = "Welcome To Log in";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // createAccountBtn
             // 
@@ -137,6 +127,17 @@
             this.createAccountBtn.Text = "Login";
             this.createAccountBtn.UseVisualStyleBackColor = false;
             this.createAccountBtn.Click += new System.EventHandler(this.createAccountBtn_Click);
+            // 
+            // welcomeText1
+            // 
+            this.welcomeText1.AutoSize = true;
+            this.welcomeText1.Font = new System.Drawing.Font("Lato Black", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeText1.ForeColor = System.Drawing.Color.Snow;
+            this.welcomeText1.Location = new System.Drawing.Point(42, 236);
+            this.welcomeText1.Name = "welcomeText1";
+            this.welcomeText1.Size = new System.Drawing.Size(331, 45);
+            this.welcomeText1.TabIndex = 15;
+            this.welcomeText1.Text = "Welcome To Log in";
             // 
             // loginCBtn
             // 
@@ -170,12 +171,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
             this.ClientSize = new System.Drawing.Size(800, 652);
             this.Controls.Add(this.loginCBtn);
             this.Controls.Add(this.welcomeText1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);

@@ -313,5 +313,10 @@ namespace CafeManagement
             Login login = new Login();
             login.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

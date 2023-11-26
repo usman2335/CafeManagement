@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CafeManagement
 {
-    public partial class InventoryManager : Form
+    public partial class Menu : Form
     {
-        public InventoryManager()
+        public Menu()
         {
             InitializeComponent();
-        }
-
-        private void InventoryManager_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

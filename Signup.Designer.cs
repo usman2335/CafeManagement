@@ -229,6 +229,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(389, 656);
             this.panel1.TabIndex = 17;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -296,12 +297,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
             this.ClientSize = new System.Drawing.Size(800, 652);
             this.Controls.Add(this.loginCBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.welcomeText1);
             this.Controls.Add(this.label8);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Signup";
             this.Text = "Signup";
             this.Load += new System.EventHandler(this.Signup_Load);

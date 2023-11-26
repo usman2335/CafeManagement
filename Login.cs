@@ -18,7 +18,7 @@ namespace CafeManagement
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=USMAN\SQLEXPRESS;Initial Catalog=CafeManagement;Integrated Security=True");
+        SqlConnection conn = DBConnecction.OpenConnection();
         SqlCommand cm = new SqlCommand();
 
         private void label1_Click(object sender, EventArgs e)
@@ -109,6 +109,11 @@ namespace CafeManagement
             this.Hide();
             Signup signup = new Signup();
             signup.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

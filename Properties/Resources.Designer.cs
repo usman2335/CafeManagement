@@ -73,6 +73,56 @@ namespace CafeManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("Brown_Simple_Round_Badge_Coffee_Shop_Logo-removebg-preview-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drew_coffman_jUOaONoXJQk_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("drew-coffman-jUOaONoXJQk-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap form {
+            get {
+                object obj = ResourceManager.GetObject("form", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hans_vivek_uhS6_xCNE8A_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("hans-vivek-uhS6_xCNE8A-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap michal_parzuchowski_ItaV89TNkks_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("michal-parzuchowski-ItaV89TNkks-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wp5615275_4k_minimal_anime_wallpapers {
             get {
                 object obj = ResourceManager.GetObject("wp5615275-4k-minimal-anime-wallpapers", resourceCulture);
