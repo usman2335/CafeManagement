@@ -49,6 +49,10 @@ namespace CafeManagement
             string fName = Fname.Text, lName = LName.Text, username = usernameTxt.Text, password = passwordTxt.Text, phone = phoneTxt.Text;
             string reEnter = reEnterPassword.Text;
             string type = comboBox1.Text;
+            String roleQuery = "Select top 1 userID from Users order by userID desc";
+            String userInsert = "Insert into Users(userID,username,password,role) values (@userID,@roleUsername,@rolePassword,@roleRole)";
+            cm = new SqlCommand(roleQuery, conn);
+            int userid = Convert.ToInt32(cm.ExecuteScalar());
             DateTime date = DateTime.Today;
             if (password != reEnter)
             {
@@ -80,9 +84,11 @@ namespace CafeManagement
                         int id = Convert.ToInt32(cm.ExecuteScalar());
                         Console.Write(id);
                         id++;
+                        
 
 
                         String queryInsert = "Insert into Cashier(CashierID,FName,LName,PhoneNo,CManagerID,username,password,HireDate) values (@cashID,@fname,@lname,@phone,null,@user,@pass,@date)";
+                        
                         cm = new SqlCommand(queryInsert, conn);
                         cm.Parameters.AddWithValue("@cashID", id);
                         cm.Parameters.AddWithValue("@fname", fName);
@@ -95,6 +101,14 @@ namespace CafeManagement
 
                         int rowsAffected = cm.ExecuteNonQuery();
 
+                      
+                        cm = new SqlCommand(userInsert, conn);
+                        cm.Parameters.AddWithValue("@userID", userid);
+                        cm.Parameters.AddWithValue("@roleUsername", username);
+                        cm.Parameters.AddWithValue("@rolePassword", password);
+                        cm.Parameters.AddWithValue("@roleRole", type);
+                        rowsAffected = cm.ExecuteNonQuery();
+
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Congratulations, your account has been successfully created.", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -103,6 +117,8 @@ namespace CafeManagement
                         {
                             MessageBox.Show("Registration failed. Please try again.", "Failure", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                         }
+
+
 
                         Login login = new Login();
                         this.Hide();
@@ -147,6 +163,14 @@ namespace CafeManagement
 
                         int rowsAffected = cm.ExecuteNonQuery();
 
+
+                        cm = new SqlCommand(userInsert, conn);
+                        cm.Parameters.AddWithValue("@userID", userid);
+                        cm.Parameters.AddWithValue("@roleUsername", username);
+                        cm.Parameters.AddWithValue("@rolePassword", password);
+                        cm.Parameters.AddWithValue("@roleRole", type);
+                        rowsAffected = cm.ExecuteNonQuery();
+
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Congratulations, your account has been successfully created.", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -155,12 +179,12 @@ namespace CafeManagement
                         {
                             MessageBox.Show("Registration failed. Please try again.", "Failure", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                         }
-
                         Login login = new Login();
                         this.Hide();
                         login.Show();
                         dr.Close();
                         conn.Close();
+
                     }
 
                 }
@@ -200,6 +224,14 @@ namespace CafeManagement
 
 
                         int rowsAffected = cm.ExecuteNonQuery();
+
+
+                        cm = new SqlCommand(userInsert, conn);
+                        cm.Parameters.AddWithValue("@userID", userid);
+                        cm.Parameters.AddWithValue("@roleUsername", username);
+                        cm.Parameters.AddWithValue("@rolePassword", password);
+                        cm.Parameters.AddWithValue("@roleRole", type);
+                        rowsAffected = cm.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
                         {
