@@ -297,5 +297,21 @@ namespace CafeManagement
             this.reEnterPassword.Text = "";
         }
 
+        private void welcomeText1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reEnterPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginCBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }

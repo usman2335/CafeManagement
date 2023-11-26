@@ -92,5 +92,17 @@ namespace CafeManagement
         {
 
         }
+
+        private void LoginText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginCBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Signup signup = new Signup();
+            signup.Show();
+        }
     }
 }

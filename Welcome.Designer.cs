@@ -43,27 +43,30 @@
             // 
             // loginCBtn
             // 
-            this.loginCBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(196)))), ((int)(((byte)(177)))));
-            this.loginCBtn.Font = new System.Drawing.Font("Roboto Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginCBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
+            this.loginCBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
+            this.loginCBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.loginCBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginCBtn.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Bold);
+            this.loginCBtn.ForeColor = System.Drawing.Color.White;
             this.loginCBtn.Location = new System.Drawing.Point(92, 359);
             this.loginCBtn.Name = "loginCBtn";
             this.loginCBtn.Size = new System.Drawing.Size(187, 46);
             this.loginCBtn.TabIndex = 2;
-            this.loginCBtn.Text = "Login";
+            this.loginCBtn.Text = "LOG IN";
             this.loginCBtn.UseVisualStyleBackColor = false;
             this.loginCBtn.Click += new System.EventHandler(this.loginCBtn_Click);
             // 
             // signupBtn
             // 
-            this.signupBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
-            this.signupBtn.Font = new System.Drawing.Font("Roboto Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signupBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(196)))), ((int)(((byte)(177)))));
+            this.signupBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
+            this.signupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signupBtn.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Bold);
+            this.signupBtn.ForeColor = System.Drawing.Color.White;
             this.signupBtn.Location = new System.Drawing.Point(92, 422);
             this.signupBtn.Name = "signupBtn";
             this.signupBtn.Size = new System.Drawing.Size(187, 46);
             this.signupBtn.TabIndex = 3;
-            this.signupBtn.Text = "Signup";
+            this.signupBtn.Text = "SIGN UP";
             this.signupBtn.UseVisualStyleBackColor = false;
             this.signupBtn.Click += new System.EventHandler(this.signupBtn_Click);
             // 
@@ -71,7 +74,7 @@
             // 
             this.welcomeText1.AutoSize = true;
             this.welcomeText1.Font = new System.Drawing.Font("Roboto", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeText1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(175)))), ((int)(((byte)(184)))));
+            this.welcomeText1.ForeColor = System.Drawing.Color.White;
             this.welcomeText1.Location = new System.Drawing.Point(516, 141);
             this.welcomeText1.Name = "welcomeText1";
             this.welcomeText1.Size = new System.Drawing.Size(164, 42);
@@ -81,10 +84,11 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(213)))));
+            this.panel1.BackColor = System.Drawing.Color.Snow;
             this.panel1.Controls.Add(this.logo);
             this.panel1.Controls.Add(this.loginCBtn);
             this.panel1.Controls.Add(this.signupBtn);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(388, 580);
@@ -94,7 +98,7 @@
             // 
             this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.logo.Image = global::CafeManagement.Properties.Resources.Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview;
-            this.logo.Location = new System.Drawing.Point(35, 93);
+            this.logo.Location = new System.Drawing.Point(48, 44);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(304, 260);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -103,11 +107,12 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.welcomeText1);
-            this.panel2.Location = new System.Drawing.Point(2, 0);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 580);
             this.panel2.TabIndex = 6;
@@ -115,7 +120,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Roboto Thin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(175)))), ((int)(((byte)(184)))));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(442, 199);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(321, 238);

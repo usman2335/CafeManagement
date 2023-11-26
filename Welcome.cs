@@ -17,6 +17,7 @@ namespace CafeManagement
             InitializeComponent();
         }
 
+
         private void welcomeText_TextChanged(object sender, EventArgs e)
         {
 
