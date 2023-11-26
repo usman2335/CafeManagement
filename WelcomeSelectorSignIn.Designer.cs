@@ -30,8 +30,8 @@
         {
             this.label6 = new System.Windows.Forms.Label();
             this.CustomerSignin_button = new System.Windows.Forms.Button();
-            this.EmployeeSignIn_button = new System.Windows.Forms.Button();
-            this.ManagerSigin_button = new System.Windows.Forms.Button();
+            this.CashierSignIn_button = new System.Windows.Forms.Button();
+            this.ManagerSignIn_button = new System.Windows.Forms.Button();
             this.WhoIsSingin_Text = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -59,31 +59,31 @@
             this.CustomerSignin_button.Text = "Sign In As Customer";
             this.CustomerSignin_button.UseVisualStyleBackColor = false;
             // 
-            // EmployeeSignIn_button
+            // CashierSignIn_button
             // 
-            this.EmployeeSignIn_button.AutoSize = true;
-            this.EmployeeSignIn_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
-            this.EmployeeSignIn_button.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeSignIn_button.ForeColor = System.Drawing.Color.MistyRose;
-            this.EmployeeSignIn_button.Location = new System.Drawing.Point(304, 243);
-            this.EmployeeSignIn_button.Name = "EmployeeSignIn_button";
-            this.EmployeeSignIn_button.Size = new System.Drawing.Size(187, 46);
-            this.EmployeeSignIn_button.TabIndex = 17;
-            this.EmployeeSignIn_button.Text = "Sign In As Employee";
-            this.EmployeeSignIn_button.UseVisualStyleBackColor = false;
+            this.CashierSignIn_button.AutoSize = true;
+            this.CashierSignIn_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
+            this.CashierSignIn_button.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CashierSignIn_button.ForeColor = System.Drawing.Color.MistyRose;
+            this.CashierSignIn_button.Location = new System.Drawing.Point(304, 243);
+            this.CashierSignIn_button.Name = "CashierSignIn_button";
+            this.CashierSignIn_button.Size = new System.Drawing.Size(187, 46);
+            this.CashierSignIn_button.TabIndex = 17;
+            this.CashierSignIn_button.Text = "Sign In As Employee";
+            this.CashierSignIn_button.UseVisualStyleBackColor = false;
             // 
-            // ManagerSigin_button
+            // ManagerSignIn_button
             // 
-            this.ManagerSigin_button.AutoSize = true;
-            this.ManagerSigin_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
-            this.ManagerSigin_button.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManagerSigin_button.ForeColor = System.Drawing.Color.MistyRose;
-            this.ManagerSigin_button.Location = new System.Drawing.Point(304, 176);
-            this.ManagerSigin_button.Name = "ManagerSigin_button";
-            this.ManagerSigin_button.Size = new System.Drawing.Size(187, 46);
-            this.ManagerSigin_button.TabIndex = 16;
-            this.ManagerSigin_button.Text = "Sign In As Manager";
-            this.ManagerSigin_button.UseVisualStyleBackColor = false;
+            this.ManagerSignIn_button.AutoSize = true;
+            this.ManagerSignIn_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(114)))), ((int)(((byte)(125)))));
+            this.ManagerSignIn_button.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManagerSignIn_button.ForeColor = System.Drawing.Color.MistyRose;
+            this.ManagerSignIn_button.Location = new System.Drawing.Point(304, 176);
+            this.ManagerSignIn_button.Name = "ManagerSignIn_button";
+            this.ManagerSignIn_button.Size = new System.Drawing.Size(187, 46);
+            this.ManagerSignIn_button.TabIndex = 16;
+            this.ManagerSignIn_button.Text = "Sign In As Manager";
+            this.ManagerSignIn_button.UseVisualStyleBackColor = false;
             // 
             // WhoIsSingin_Text
             // 
@@ -104,8 +104,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.CustomerSignin_button);
-            this.Controls.Add(this.EmployeeSignIn_button);
-            this.Controls.Add(this.ManagerSigin_button);
+            this.Controls.Add(this.CashierSignIn_button);
+            this.Controls.Add(this.ManagerSignIn_button);
             this.Controls.Add(this.WhoIsSingin_Text);
             this.Name = "WelcomeSelectorSignIn";
             this.Text = "Form3";
@@ -118,8 +118,8 @@
 
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button CustomerSignin_button;
-        private System.Windows.Forms.Button EmployeeSignIn_button;
-        private System.Windows.Forms.Button ManagerSigin_button;
+        private System.Windows.Forms.Button CashierSignIn_button;
+        private System.Windows.Forms.Button ManagerSignIn_button;
         private System.Windows.Forms.TextBox WhoIsSingin_Text;
     }
 }
