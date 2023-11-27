@@ -93,6 +93,36 @@ namespace CafeManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap estudio_bloom_92HwFhCp_MQ_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("estudio-bloom-92HwFhCp-MQ-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap estudio_bloom_92HwFhCp_MQ_unsplash1 {
+            get {
+                object obj = ResourceManager.GetObject("estudio-bloom-92HwFhCp-MQ-unsplash1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap estudio_bloom_tOitjphtIXU_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("estudio-bloom-tOitjphtIXU-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap form {
             get {
                 object obj = ResourceManager.GetObject("form", resourceCulture);

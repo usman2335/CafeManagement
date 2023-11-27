@@ -16,5 +16,18 @@ namespace CafeManagement
         {
             InitializeComponent();
         }
+
+        private void HomeLabel_Click(object sender, EventArgs e)
+        {
+            Customer form = new Customer();
+            this.Hide();
+            form.Show();
+        }
+
+        // sorry for this one accidently clicked on the image 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

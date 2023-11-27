@@ -75,5 +75,12 @@ namespace CafeManagement
             this.Hide();
             form.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Login form = new Login();
+            this.Hide();
+            form.Show();
+        }
     }
 }
