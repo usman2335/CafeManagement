@@ -50,7 +50,7 @@ namespace CafeManagement
             string reEnter = reEnterPassword.Text;
             string type = comboBox1.Text;
             String roleQuery = "Select top 1 userID from Users order by userID desc";
-            String userInsert = "Insert into Users(userID,username,password,role) values (@userID,@roleUsername,@rolePassword,@roleRole)";
+            String userInsert = "Insert into Users(username,password,role) values (@roleUsername,@rolePassword,@roleRole)";
             conn.Open();
             cm = new SqlCommand(roleQuery, conn);
 
@@ -92,7 +92,7 @@ namespace CafeManagement
                         
 
 
-                        String queryInsert = "Insert into Cashier(CashierID,FName,LName,PhoneNo,CManagerID,username,password,HireDate) values (@cashID,@fname,@lname,@phone,null,@user,@pass,@date)";
+                        String queryInsert = "Insert into Cashier(FName,LName,PhoneNo,CManagerID,username,password,HireDate) values (@fname,@lname,@phone,null,@user,@pass,@date)";
                         
                         cm = new SqlCommand(queryInsert, conn);
                         cm.Parameters.AddWithValue("@cashID", id);
@@ -156,7 +156,7 @@ namespace CafeManagement
                         id++;
 
 
-                        String queryInsert = "Insert into Customer(CustomerID,FName,LName,username,password,LoyaltyPoints,RegisterationDate,OrderID) values (@custId,@fname,@lname,@user,@pass,null,@date,null)";
+                        String queryInsert = "Insert into Customer(FName,LName,username,password,LoyaltyPoints,RegisterationDate,OrderID) values (@fname,@lname,@user,@pass,null,@date,null)";
                         cm = new SqlCommand(queryInsert, conn);
                         cm.Parameters.AddWithValue("@custId", id);
                         cm.Parameters.AddWithValue("@fname", fName);
@@ -217,7 +217,7 @@ namespace CafeManagement
                         id++;
 
 
-                        String queryInsert = "Insert into InventoryManager(InvManagerID,FName,LName,PhoneNo,HireDate,CManagerID,InventoryID,username,password) values (@InvMgrID,@fname,@lname,@phone,@date,null,null,@user,@pass)";
+                        String queryInsert = "Insert into InventoryManager(FName,LName,PhoneNo,HireDate,CManagerID,InventoryID,username,password) values (@fname,@lname,@phone,@date,null,null,@user,@pass)";
                         cm = new SqlCommand(queryInsert, conn);
                         cm.Parameters.AddWithValue("@InvMgrID", id);
                         cm.Parameters.AddWithValue("@fname", fName);

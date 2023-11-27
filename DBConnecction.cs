@@ -11,7 +11,7 @@ namespace CafeManagement
     {
          public static SqlConnection OpenConnection()
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-DCKBU0Q\SQLEXPRESS;Initial Catalog=Final;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=USMAN\SQLEXPRESS;Initial Catalog=CafeFinal;Integrated Security=True");
             return conn;
         }
     }

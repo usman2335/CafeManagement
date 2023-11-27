@@ -175,7 +175,7 @@
             this.createAccountBtn.Location = new System.Drawing.Point(58, 539);
             this.createAccountBtn.Name = "createAccountBtn";
             this.createAccountBtn.Size = new System.Drawing.Size(239, 43);
-            this.createAccountBtn.TabIndex = 8;
+            this.createAccountBtn.TabIndex = 9;
             this.createAccountBtn.Text = "Create Account";
             this.createAccountBtn.UseVisualStyleBackColor = false;
             this.createAccountBtn.Click += new System.EventHandler(this.createAccountBtn_Click);
@@ -192,7 +192,7 @@
             this.comboBox1.Location = new System.Drawing.Point(183, 107);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(195, 21);
-            this.comboBox1.TabIndex = 16;
+            this.comboBox1.TabIndex = 8;
             this.comboBox1.Text = "Choose who you are signing up as";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -204,7 +204,7 @@
             this.phoneTxt.Multiline = true;
             this.phoneTxt.Name = "phoneTxt";
             this.phoneTxt.Size = new System.Drawing.Size(237, 30);
-            this.phoneTxt.TabIndex = 2;
+            this.phoneTxt.TabIndex = 7;
             this.phoneTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Fname_TextChanged);
             // 
             // panel1

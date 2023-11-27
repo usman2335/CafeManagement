@@ -82,5 +82,10 @@ namespace CafeManagement
             this.Hide();
             form.Show();
         }
+        public string _textBox
+        {
+            set {label2.Text = value;}
+        }
+
     }
 }

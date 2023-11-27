@@ -45,7 +45,6 @@
             // 
             this.loginCBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
             this.loginCBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.loginCBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginCBtn.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Bold);
             this.loginCBtn.ForeColor = System.Drawing.Color.White;
             this.loginCBtn.Location = new System.Drawing.Point(92, 359);
@@ -59,7 +58,6 @@
             // signupBtn
             // 
             this.signupBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
-            this.signupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signupBtn.Font = new System.Drawing.Font("Lato", 11F, System.Drawing.FontStyle.Bold);
             this.signupBtn.ForeColor = System.Drawing.Color.White;
             this.signupBtn.Location = new System.Drawing.Point(92, 422);

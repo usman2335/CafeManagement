@@ -5,10 +5,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CafeManagement
 {
@@ -42,15 +44,23 @@ namespace CafeManagement
             string username = usernameTxt.Text, password = passwordTxt.Text;
             String query = "Select * from Users Where username = '" + usernameTxt.Text + "' AND password = '" + passwordTxt.Text + "'";
             String roleQuery = "Select role from Users Where username = '" + usernameTxt.Text + "' AND password = '" + passwordTxt.Text + "'";
+            String customerNameQuery = "Select FName from Customer Where username = '" + usernameTxt.Text + "' AND password = '" + passwordTxt.Text + "'";
             cm = new SqlCommand(roleQuery, conn);
             string role = Convert.ToString(cm.ExecuteScalar());
             cm = new SqlCommand(query, conn);
             SqlDataReader dr = cm.ExecuteReader();
+           // cm = new SqlCommand(customerNameQuery, conn);
+            //string custName = Convert.ToString(cm.ExecuteScalar());
+
+
+
             if(dr.HasRows)
             {
                 if(role == "Customer")
                 {
+
                     Customer customer = new Customer();
+                    customer._textBox = "Welcome, "+ _textBox1;
                     this.Close();
                     customer.Show();
                 }
@@ -82,9 +92,11 @@ namespace CafeManagement
             }
 
             conn.Close();
+        }
 
-
-            
+        public string _textBox1
+        {
+            get { return usernameTxt.Text; }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
