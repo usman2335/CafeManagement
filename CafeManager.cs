@@ -34,10 +34,14 @@ namespace CafeManagement
             this.button5.BackColor = System.Drawing.Color.Snow;                     // edit items
             this.button5.ForeColor = System.Drawing.Color.FromArgb(200, 70, 77);
 
+            this.button4.BackColor = System.Drawing.Color.Snow;                    // delete items
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(100, 10, 50);
+
 
             EditItemPanel.Hide();
             AddItemPanel.Hide();
             ViewProductPanel.Show();
+            DeletePanel.Hide();
 
 
 
@@ -50,6 +54,7 @@ namespace CafeManagement
 
             table.Load(reader);
             productViewGrid.DataSource = table;
+            reader.Close();
             conn.Close();
         }
 
@@ -60,6 +65,7 @@ namespace CafeManagement
             EditItemPanel.Hide();
             AddItemPanel.Show();
             ViewProductPanel.Hide();
+            DeletePanel.Hide();
 
             this.button1.BackColor = System.Drawing.Color.Snow;                     // view items
             this.button1.ForeColor = System.Drawing.Color.FromArgb(200, 70, 77);    
@@ -69,6 +75,9 @@ namespace CafeManagement
 
             this.button5.BackColor = System.Drawing.Color.Snow;                     // edit items
             this.button5.ForeColor = System.Drawing.Color.FromArgb(200, 70, 77);
+
+            this.button4.BackColor = System.Drawing.Color.Snow;                    // delete items
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(100, 10, 50);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -111,9 +120,9 @@ namespace CafeManagement
                 MessageBox.Show("Product already exists.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 productName.Clear();
                 productPrice.Clear();
-                dr.Close();
+                
             }
-
+            dr.Close();
             conn.Close();
 
         }
@@ -160,8 +169,8 @@ namespace CafeManagement
             table.Load(reader);
             EditProdGridView.DataSource = table;
 
-            
 
+            reader.Close();
             conn.Close();
         }
 
@@ -169,13 +178,17 @@ namespace CafeManagement
         {
             AddItemPanel.Hide();
             ViewProductPanel.Hide();
+            DeletePanel.Hide();
             EditItemPanel.Show();
 
             this.button1.BackColor = System.Drawing.Color.Snow;                     // view items
             this.button1.ForeColor = System.Drawing.Color.FromArgb(200, 70, 77);
 
-            this.button3.BackColor = System.Drawing.Color.Snow;    // add items
+            this.button3.BackColor = System.Drawing.Color.Snow;                     // add items
             this.button3.ForeColor = System.Drawing.Color.FromArgb(200, 70, 77);
+
+            this.button4.BackColor = System.Drawing.Color.Snow;                    // delete items
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(100, 10, 50);
 
             this.button5.BackColor = System.Drawing.Color.FromArgb(100,10,50);
             this.button5.ForeColor = System.Drawing.Color.Snow;
@@ -215,6 +228,7 @@ namespace CafeManagement
             AddItemPanel.Hide();
             ViewProductPanel.Hide();
             EditItemPanel.Hide();
+            DeletePanel.Show();
 
             this.button1.BackColor = System.Drawing.Color.Snow;                    // view items
             this.button1.ForeColor = System.Drawing.Color.FromArgb(100, 10, 50);
@@ -225,10 +239,49 @@ namespace CafeManagement
             this.button5.BackColor = System.Drawing.Color.Snow;  
             this.button5.ForeColor = System.Drawing.Color.FromArgb(100, 10, 50);  // edit items
 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(100, 10, 50);
+            this.button4.ForeColor = System.Drawing.Color.Snow;
+
         }
 
         private void Viewitems_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Deletebtn_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string prodName = deleteTxtBox.Text;
+            string deleteCheckQuery = "select * from Product where ProductName = @name";
+            cm = new SqlCommand(deleteCheckQuery, conn);
+            cm.Parameters.AddWithValue("@name", prodName);
+            SqlDataReader dr = cm.ExecuteReader();
+            if(!dr.HasRows)
+            {
+                MessageBox.Show("Product does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dr.Close();
+            }
+            else
+            {
+                dr.Close();
+                string deleteQuery = "delete from Product where ProductName = @name";
+                cm = new SqlCommand(deleteQuery, conn);
+                cm.Parameters.AddWithValue("@name", prodName);
+                int rows = cm.ExecuteNonQuery();
+                if(rows > 0)
+                {
+                    MessageBox.Show("Product Deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    deleteTxtBox.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Product couldn't be deleted. Please try again.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    deleteTxtBox.Clear();
+                }
+            }
+            dr.Close();
+            conn.Close();
 
         }
     }
