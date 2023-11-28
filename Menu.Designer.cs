@@ -67,6 +67,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Log Out";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -153,6 +154,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Menu";
             this.Text = "Menu";
             this.panel1.ResumeLayout(false);
