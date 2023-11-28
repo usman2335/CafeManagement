@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -64,14 +63,16 @@
             this.deleteTxtBox = new System.Windows.Forms.TextBox();
             this.deleteLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.AddItemPanel.SuspendLayout();
             this.ViewProductPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productViewGrid)).BeginInit();
             this.EditItemPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EditProdGridView)).BeginInit();
             this.DeletePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -115,16 +116,6 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CafeManagement.Properties.Resources.Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview1;
-            this.pictureBox1.Location = new System.Drawing.Point(3, -11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 89);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -133,7 +124,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Lato Light", 10F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
-            this.button1.Location = new System.Drawing.Point(23, 271);
+            this.button1.Location = new System.Drawing.Point(23, 176);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 37);
             this.button1.TabIndex = 4;
@@ -149,7 +140,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Lato Light", 10F);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
-            this.button3.Location = new System.Drawing.Point(23, 323);
+            this.button3.Location = new System.Drawing.Point(23, 228);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 37);
             this.button3.TabIndex = 4;
@@ -165,7 +156,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Lato Light", 10F);
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
-            this.button4.Location = new System.Drawing.Point(23, 443);
+            this.button4.Location = new System.Drawing.Point(23, 348);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(110, 37);
             this.button4.TabIndex = 4;
@@ -181,7 +172,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Lato Light", 10F);
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
-            this.button5.Location = new System.Drawing.Point(23, 383);
+            this.button5.Location = new System.Drawing.Point(23, 288);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 37);
             this.button5.TabIndex = 4;
@@ -528,11 +519,36 @@
             this.label9.Text = "Enter product to delete";
             this.label9.Click += new System.EventHandler(this.label6_Click);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Snow;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Lato Light", 10F);
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
+            this.button6.Location = new System.Drawing.Point(23, 413);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(110, 49);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "Manage Employees";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CafeManagement.Properties.Resources.Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview1;
+            this.pictureBox1.Location = new System.Drawing.Point(3, -11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 89);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // CafeManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 702);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.DeletePanel);
             this.Controls.Add(this.EditItemPanel);
             this.Controls.Add(this.ViewProductPanel);
@@ -547,7 +563,6 @@
             this.Text = "CafeManager";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.AddItemPanel.ResumeLayout(false);
             this.AddItemPanel.PerformLayout();
             this.ViewProductPanel.ResumeLayout(false);
@@ -558,6 +573,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.EditProdGridView)).EndInit();
             this.DeletePanel.ResumeLayout(false);
             this.DeletePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -600,5 +616,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox deleteTxtBox;
         private System.Windows.Forms.Button Deletebtn;
+        private System.Windows.Forms.Button button6;
     }
 }

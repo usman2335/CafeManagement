@@ -63,6 +63,16 @@ namespace CafeManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back {
+            get {
+                object obj = ResourceManager.GetObject("back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Brown_Simple_Round_Badge_Coffee_Shop_Logo-removebg-preview-removebg-preview", resourceCulture);
@@ -136,6 +146,16 @@ namespace CafeManagement.Properties {
         internal static System.Drawing.Bitmap hans_vivek_uhS6_xCNE8A_unsplash {
             get {
                 object obj = ResourceManager.GetObject("hans-vivek-uhS6_xCNE8A-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_back_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-back-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

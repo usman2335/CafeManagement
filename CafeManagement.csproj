@@ -77,6 +77,12 @@
     <Compile Include="InventoryManager.Designer.cs">
       <DependentUpon>InventoryManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Employees.Designer.cs">
+      <DependentUpon>Manage Employees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Employees.resx">
+      <DependentUpon>Manage Employees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -200,6 +209,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="estudio-bloom-tOitjphtIXU-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
