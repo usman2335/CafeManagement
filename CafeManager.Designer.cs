@@ -48,11 +48,29 @@
             this.ViewProductPanel = new System.Windows.Forms.Panel();
             this.Viewitems = new System.Windows.Forms.Label();
             this.productViewGrid = new System.Windows.Forms.DataGridView();
+            this.EditItemPanel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.editTextBox = new System.Windows.Forms.TextBox();
+            this.editViewBtn = new System.Windows.Forms.Button();
+            this.EditProdGridView = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.editNameTxt = new System.Windows.Forms.TextBox();
+            this.EditPriceTxt = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.submitEditBtn = new System.Windows.Forms.Button();
+            this.DeletePanel = new System.Windows.Forms.Panel();
+            this.deleteLabel = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.AddItemPanel.SuspendLayout();
             this.ViewProductPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productViewGrid)).BeginInit();
+            this.EditItemPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EditProdGridView)).BeginInit();
+            this.DeletePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,7 +83,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1365, 76);
+            this.panel1.Size = new System.Drawing.Size(1635, 76);
             this.panel1.TabIndex = 4;
             // 
             // label1
@@ -74,7 +92,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lato Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(601, 19);
+            this.label1.Location = new System.Drawing.Point(736, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 29);
             this.label1.TabIndex = 5;
@@ -88,7 +106,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
-            this.button2.Location = new System.Drawing.Point(1237, 19);
+            this.button2.Location = new System.Drawing.Point(1507, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 37);
             this.button2.TabIndex = 4;
@@ -152,6 +170,7 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "Remove Item";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -167,6 +186,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Edit Item";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // AddItemPanel
             // 
@@ -179,7 +199,7 @@
             this.AddItemPanel.Controls.Add(this.label3);
             this.AddItemPanel.Controls.Add(this.productName);
             this.AddItemPanel.Controls.Add(this.label2);
-            this.AddItemPanel.Location = new System.Drawing.Point(416, 82);
+            this.AddItemPanel.Location = new System.Drawing.Point(785, 420);
             this.AddItemPanel.Name = "AddItemPanel";
             this.AddItemPanel.Size = new System.Drawing.Size(385, 567);
             this.AddItemPanel.TabIndex = 5;
@@ -307,20 +327,198 @@
             this.Viewitems.Size = new System.Drawing.Size(165, 29);
             this.Viewitems.TabIndex = 5;
             this.Viewitems.Text = "View Products";
+            this.Viewitems.Click += new System.EventHandler(this.Viewitems_Click);
             // 
             // productViewGrid
             // 
+            this.productViewGrid.BackgroundColor = System.Drawing.Color.Snow;
+            this.productViewGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.productViewGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productViewGrid.Location = new System.Drawing.Point(39, 160);
+            this.productViewGrid.Location = new System.Drawing.Point(30, 168);
             this.productViewGrid.Name = "productViewGrid";
-            this.productViewGrid.Size = new System.Drawing.Size(323, 297);
+            this.productViewGrid.Size = new System.Drawing.Size(323, 164);
             this.productViewGrid.TabIndex = 6;
+            // 
+            // EditItemPanel
+            // 
+            this.EditItemPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.EditItemPanel.Controls.Add(this.submitEditBtn);
+            this.EditItemPanel.Controls.Add(this.EditPriceTxt);
+            this.EditItemPanel.Controls.Add(this.editNameTxt);
+            this.EditItemPanel.Controls.Add(this.EditProdGridView);
+            this.EditItemPanel.Controls.Add(this.editViewBtn);
+            this.EditItemPanel.Controls.Add(this.editTextBox);
+            this.EditItemPanel.Controls.Add(this.label5);
+            this.EditItemPanel.Controls.Add(this.label8);
+            this.EditItemPanel.Controls.Add(this.label7);
+            this.EditItemPanel.Controls.Add(this.label6);
+            this.EditItemPanel.Location = new System.Drawing.Point(1214, 82);
+            this.EditItemPanel.Name = "EditItemPanel";
+            this.EditItemPanel.Size = new System.Drawing.Size(385, 567);
+            this.EditItemPanel.TabIndex = 7;
+            this.EditItemPanel.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lato", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Snow;
+            this.label5.Location = new System.Drawing.Point(121, 99);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(144, 29);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Edit Product";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lato", 13F);
+            this.label6.ForeColor = System.Drawing.Color.Snow;
+            this.label6.Location = new System.Drawing.Point(30, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(172, 22);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Enter product to edit";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // editTextBox
+            // 
+            this.editTextBox.Location = new System.Drawing.Point(34, 183);
+            this.editTextBox.Multiline = true;
+            this.editTextBox.Name = "editTextBox";
+            this.editTextBox.Size = new System.Drawing.Size(273, 25);
+            this.editTextBox.TabIndex = 6;
+            this.editTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // editViewBtn
+            // 
+            this.editViewBtn.Font = new System.Drawing.Font("Lato Light", 10F);
+            this.editViewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
+            this.editViewBtn.Location = new System.Drawing.Point(127, 214);
+            this.editViewBtn.Name = "editViewBtn";
+            this.editViewBtn.Size = new System.Drawing.Size(87, 29);
+            this.editViewBtn.TabIndex = 7;
+            this.editViewBtn.Text = "View";
+            this.editViewBtn.UseVisualStyleBackColor = true;
+            this.editViewBtn.Click += new System.EventHandler(this.editViewBtn_Click);
+            // 
+            // EditProdGridView
+            // 
+            this.EditProdGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EditProdGridView.Location = new System.Drawing.Point(34, 283);
+            this.EditProdGridView.Name = "EditProdGridView";
+            this.EditProdGridView.Size = new System.Drawing.Size(273, 69);
+            this.EditProdGridView.TabIndex = 8;
+            this.EditProdGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Lato", 13F);
+            this.label7.ForeColor = System.Drawing.Color.Snow;
+            this.label7.Location = new System.Drawing.Point(30, 355);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(139, 22);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Enter new Name";
+            this.label7.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // editNameTxt
+            // 
+            this.editNameTxt.Location = new System.Drawing.Point(34, 381);
+            this.editNameTxt.Multiline = true;
+            this.editNameTxt.Name = "editNameTxt";
+            this.editNameTxt.Size = new System.Drawing.Size(273, 26);
+            this.editNameTxt.TabIndex = 9;
+            // 
+            // EditPriceTxt
+            // 
+            this.EditPriceTxt.Location = new System.Drawing.Point(34, 456);
+            this.EditPriceTxt.Multiline = true;
+            this.EditPriceTxt.Name = "EditPriceTxt";
+            this.EditPriceTxt.Size = new System.Drawing.Size(273, 26);
+            this.EditPriceTxt.TabIndex = 10;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Lato", 13F);
+            this.label8.ForeColor = System.Drawing.Color.Snow;
+            this.label8.Location = new System.Drawing.Point(30, 431);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(132, 22);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Enter new Price";
+            this.label8.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // submitEditBtn
+            // 
+            this.submitEditBtn.Font = new System.Drawing.Font("Lato Light", 10F);
+            this.submitEditBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
+            this.submitEditBtn.Location = new System.Drawing.Point(127, 501);
+            this.submitEditBtn.Name = "submitEditBtn";
+            this.submitEditBtn.Size = new System.Drawing.Size(87, 29);
+            this.submitEditBtn.TabIndex = 11;
+            this.submitEditBtn.Text = "Submit";
+            this.submitEditBtn.UseVisualStyleBackColor = true;
+            this.submitEditBtn.Click += new System.EventHandler(this.submitEditBtn_Click);
+            // 
+            // DeletePanel
+            // 
+            this.DeletePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.DeletePanel.Controls.Add(this.textBox1);
+            this.DeletePanel.Controls.Add(this.deleteLabel);
+            this.DeletePanel.Controls.Add(this.label9);
+            this.DeletePanel.Location = new System.Drawing.Point(226, 92);
+            this.DeletePanel.Name = "DeletePanel";
+            this.DeletePanel.Size = new System.Drawing.Size(385, 567);
+            this.DeletePanel.TabIndex = 8;
+            // 
+            // deleteLabel
+            // 
+            this.deleteLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.deleteLabel.AutoSize = true;
+            this.deleteLabel.Font = new System.Drawing.Font("Lato", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteLabel.ForeColor = System.Drawing.Color.Snow;
+            this.deleteLabel.Location = new System.Drawing.Point(107, 89);
+            this.deleteLabel.Name = "deleteLabel";
+            this.deleteLabel.Size = new System.Drawing.Size(174, 29);
+            this.deleteLabel.TabIndex = 5;
+            this.deleteLabel.Text = "Delete Product";
+            this.deleteLabel.Click += new System.EventHandler(this.Viewitems_Click);
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Lato", 13F);
+            this.label9.ForeColor = System.Drawing.Color.Snow;
+            this.label9.Location = new System.Drawing.Point(40, 158);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(190, 22);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Enter product to delete";
+            this.label9.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(44, 189);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(273, 25);
+            this.textBox1.TabIndex = 6;
             // 
             // CafeManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1341, 779);
+            this.ClientSize = new System.Drawing.Size(1611, 779);
+            this.Controls.Add(this.DeletePanel);
+            this.Controls.Add(this.EditItemPanel);
             this.Controls.Add(this.ViewProductPanel);
             this.Controls.Add(this.AddItemPanel);
             this.Controls.Add(this.button5);
@@ -338,6 +536,11 @@
             this.ViewProductPanel.ResumeLayout(false);
             this.ViewProductPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productViewGrid)).EndInit();
+            this.EditItemPanel.ResumeLayout(false);
+            this.EditItemPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EditProdGridView)).EndInit();
+            this.DeletePanel.ResumeLayout(false);
+            this.DeletePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -364,5 +567,20 @@
         private System.Windows.Forms.Panel ViewProductPanel;
         private System.Windows.Forms.DataGridView productViewGrid;
         private System.Windows.Forms.Label Viewitems;
+        private System.Windows.Forms.Panel EditItemPanel;
+        private System.Windows.Forms.TextBox editTextBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView EditProdGridView;
+        private System.Windows.Forms.Button editViewBtn;
+        private System.Windows.Forms.Button submitEditBtn;
+        private System.Windows.Forms.TextBox EditPriceTxt;
+        private System.Windows.Forms.TextBox editNameTxt;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel DeletePanel;
+        private System.Windows.Forms.Label deleteLabel;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

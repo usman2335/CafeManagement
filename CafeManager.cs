@@ -25,8 +25,21 @@ namespace CafeManagement
         
         private void button1_Click(object sender, EventArgs e)
         {
+            this.button1.BackColor = System.Drawing.Color.FromArgb(100, 10, 50);
+            this.button1.ForeColor = System.Drawing.Color.Snow;
+
+            this.button3.BackColor = System.Drawing.Color.Snow;                     // view items
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(200, 70, 77);
+
+            this.button5.BackColor = System.Drawing.Color.Snow;                     // edit items
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(200, 70, 77);
+
+
+            EditItemPanel.Hide();
             AddItemPanel.Hide();
             ViewProductPanel.Show();
+
+
 
             conn.Open();
             string viewProducts = "select * from Product";
@@ -44,8 +57,18 @@ namespace CafeManagement
 
         private void button3_Click(object sender, EventArgs e)
         {
+            EditItemPanel.Hide();
             AddItemPanel.Show();
             ViewProductPanel.Hide();
+
+            this.button1.BackColor = System.Drawing.Color.Snow;                     // view items
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(200, 70, 77);    
+
+            this.button3.BackColor = System.Drawing.Color.FromArgb(100, 10, 50);    // add items
+            this.button3.ForeColor = System.Drawing.Color.Snow;
+
+            this.button5.BackColor = System.Drawing.Color.Snow;                     // edit items
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(200, 70, 77);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -105,6 +128,108 @@ namespace CafeManagement
             this.Hide();
             Login login = new Login();
             login.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void editViewBtn_Click(object sender, EventArgs e)
+        {
+
+            conn.Open();
+            string prodName = editTextBox.Text;
+            string viewProducts = "select * from Product where ProductName = @name";
+            cm = new SqlCommand(viewProducts, conn);
+            cm.Parameters.AddWithValue("@name", prodName);
+            SqlDataReader reader = cm.ExecuteReader();
+
+            DataTable table = new DataTable();
+
+            table.Load(reader);
+            EditProdGridView.DataSource = table;
+
+            
+
+            conn.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AddItemPanel.Hide();
+            ViewProductPanel.Hide();
+            EditItemPanel.Show();
+
+            this.button1.BackColor = System.Drawing.Color.Snow;                     // view items
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(200, 70, 77);
+
+            this.button3.BackColor = System.Drawing.Color.Snow;    // add items
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(200, 70, 77);
+
+            this.button5.BackColor = System.Drawing.Color.FromArgb(100,10,50);
+            this.button5.ForeColor = System.Drawing.Color.Snow;
+
+
+        }
+
+        private void submitEditBtn_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string prodName = editNameTxt.Text , price = EditPriceTxt.Text;
+            string editQuery = "update Product set ProductName = @newname, UnitPrice = @newprice where ProductName = @oldname";
+            cm = new SqlCommand(editQuery, conn);
+            cm.Parameters.AddWithValue("@newname", prodName);
+            cm.Parameters.AddWithValue("@newprice", price);
+            cm.Parameters.AddWithValue("@oldname",editTextBox.Text);
+            int rows = cm.ExecuteNonQuery();
+            if (rows > 0)
+            {
+                MessageBox.Show("Product edited.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                editNameTxt.Clear();
+                EditPriceTxt.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Product couldn't be edited. Please try again.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                editNameTxt.Clear();
+                EditPriceTxt.Clear();
+            }
+
+            editTextBox.Clear();
+            conn.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddItemPanel.Hide();
+            ViewProductPanel.Hide();
+            EditItemPanel.Hide();
+
+            this.button1.BackColor = System.Drawing.Color.Snow;                    // view items
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(100, 10, 50);
+
+            this.button3.BackColor = System.Drawing.Color.Snow;                   // add items
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(200, 70, 77);
+
+            this.button5.BackColor = System.Drawing.Color.Snow;  
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(100, 10, 50);  // edit items
+
+        }
+
+        private void Viewitems_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
