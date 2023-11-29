@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -122,9 +123,64 @@ namespace CafeManagement
             this.button4.BackColor = System.Drawing.Color.FromArgb(100, 10, 50); //delete employees
             this.button4.ForeColor = System.Drawing.Color.Snow;
 
+         
 
 
 
+
+        }
+
+        private void Manage_Employees_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewEmpGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string viewEmp = "select * from EmployeeView where username = @user";
+            string name = deleteTextBox.Text;
+            conn.Open();
+            SqlCommand cm = new SqlCommand(viewEmp, conn);
+            cm.Parameters.AddWithValue("@user", name);
+            SqlDataReader dr = cm.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            deleteViewGrid.DataSource = dt;
+            conn.Close();
+            dr.Close();
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string emp = deleteViewGrid.Rows[0].Cells[0].Value.ToString();
+            string deleteQuery = "DELETE FROM users WHERE userID = @id; DELETE c FROM Cashier c INNER JOIN users u ON c.userID = u.userID WHERE u.userID = @id; DELETE im FROM inventoryManager im INNER JOIN users u ON im.userID = u.userID WHERE u.userID = @id;";
+
+            cm = new SqlCommand(deleteQuery, conn);
+            cm.Parameters.AddWithValue("@id", emp);
+            int rows = cm.ExecuteNonQuery();
+            if(rows > 0)
+            {
+                MessageBox.Show("Employee deleted.", "Fired", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                MessageBox.Show("Employee could not be deleted.", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            conn.Close();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            CafeManager cafeManager = new CafeManager();
+            this.Hide();
+            cafeManager.Show();
         }
     }
 }
