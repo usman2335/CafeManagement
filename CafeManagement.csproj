@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="CafeManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="Cashier.Designer.cs">
       <DependentUpon>Cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactUs.Designer.cs">
+      <DependentUpon>ContactUs.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
@@ -139,14 +151,23 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CafeManager.resx">
       <DependentUpon>CafeManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashier.resx">
       <DependentUpon>Cashier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ContactUs.resx">
+      <DependentUpon>ContactUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryManager.resx">
       <DependentUpon>InventoryManager.cs</DependentUpon>
@@ -227,10 +248,16 @@
     <None Include="estudio-bloom-tOitjphtIXU-unsplash.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\back.png" />
+    <None Include="email.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-back-100.png" />
+    <None Include="email-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Instagram-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

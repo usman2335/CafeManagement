@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.MenuLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.HomeLabel = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -47,11 +48,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.HomeLabel);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.MenuLabel);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-6, -2);
             this.panel1.Name = "panel1";
@@ -59,15 +61,52 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(143, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 19);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "label2";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Snow;
+            this.label6.Location = new System.Drawing.Point(569, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 23);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "About Us";
+            this.label6.Click += new System.EventHandler(this.label6_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Snow;
+            this.label1.Location = new System.Drawing.Point(354, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 23);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Menu";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Snow;
+            this.label3.Location = new System.Drawing.Point(438, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 23);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Contact Us";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
+            // 
+            // HomeLabel
+            // 
+            this.HomeLabel.AutoSize = true;
+            this.HomeLabel.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
+            this.HomeLabel.Location = new System.Drawing.Point(266, 24);
+            this.HomeLabel.Name = "HomeLabel";
+            this.HomeLabel.Size = new System.Drawing.Size(61, 23);
+            this.HomeLabel.TabIndex = 7;
+            this.HomeLabel.Text = "Home";
             // 
             // button2
             // 
@@ -84,46 +123,20 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label3
+            // pictureBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Location = new System.Drawing.Point(393, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 18);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Contact Us";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // MenuLabel
-            // 
-            this.MenuLabel.AutoSize = true;
-            this.MenuLabel.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
-            this.MenuLabel.ForeColor = System.Drawing.Color.Snow;
-            this.MenuLabel.Location = new System.Drawing.Point(316, 28);
-            this.MenuLabel.Name = "MenuLabel";
-            this.MenuLabel.Size = new System.Drawing.Size(48, 18);
-            this.MenuLabel.TabIndex = 2;
-            this.MenuLabel.Text = "Menu";
-            this.MenuLabel.Click += new System.EventHandler(this.MenuLabel_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(499, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "About Us";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.pictureBox1.Image = global::CafeManagement.Properties.Resources.Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview1;
+            this.pictureBox1.Location = new System.Drawing.Point(3, -11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 89);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(0,204,212,230);
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))), ((int)(((byte)(230)))));
             this.label4.Font = new System.Drawing.Font("Lato Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Snow;
             this.label4.Location = new System.Drawing.Point(21, 123);
@@ -163,16 +176,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CafeManagement.Properties.Resources.Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview1;
-            this.pictureBox1.Location = new System.Drawing.Point(3, -11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 89);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(60)))), ((int)(((byte)(53)))));
@@ -184,6 +187,17 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Snow;
+            this.label2.Location = new System.Drawing.Point(138, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 23);
+            this.label2.TabIndex = 6;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Customer
             // 
@@ -213,13 +227,14 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label MenuLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label HomeLabel;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
     }
 }
