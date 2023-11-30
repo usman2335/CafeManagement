@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -66,14 +65,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.AddItemPanel.SuspendLayout();
             this.ViewProductPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productViewGrid)).BeginInit();
             this.EditItemPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EditProdGridView)).BeginInit();
             this.DeletePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,7 +86,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 76);
+            this.panel1.Size = new System.Drawing.Size(1151, 76);
             this.panel1.TabIndex = 4;
             // 
             // label1
@@ -95,7 +95,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lato Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(419, 19);
+            this.label1.Location = new System.Drawing.Point(494, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 29);
             this.label1.TabIndex = 5;
@@ -109,23 +109,13 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
-            this.button2.Location = new System.Drawing.Point(872, 19);
+            this.button2.Location = new System.Drawing.Point(1023, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 37);
             this.button2.TabIndex = 4;
             this.button2.Text = "Log Out";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CafeManagement.Properties.Resources.Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview1;
-            this.pictureBox1.Location = new System.Drawing.Point(3, -11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 89);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
@@ -472,6 +462,7 @@
             // 
             // DeletePanel
             // 
+            this.DeletePanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.DeletePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(10)))), ((int)(((byte)(50)))));
             this.DeletePanel.Controls.Add(this.Deletebtn);
             this.DeletePanel.Controls.Add(this.deleteTxtBox);
@@ -558,11 +549,21 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CafeManagement.Properties.Resources.Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview1;
+            this.pictureBox1.Location = new System.Drawing.Point(3, -11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 89);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // CafeManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 702);
+            this.ClientSize = new System.Drawing.Size(1127, 702);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.DeletePanel);
@@ -579,7 +580,6 @@
             this.Text = "CafeManager";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.AddItemPanel.ResumeLayout(false);
             this.AddItemPanel.PerformLayout();
             this.ViewProductPanel.ResumeLayout(false);
@@ -590,6 +590,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.EditProdGridView)).EndInit();
             this.DeletePanel.ResumeLayout(false);
             this.DeletePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

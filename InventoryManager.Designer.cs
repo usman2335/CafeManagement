@@ -273,6 +273,7 @@
             this.AddItemPanel.Size = new System.Drawing.Size(504, 499);
             this.AddItemPanel.TabIndex = 15;
             this.AddItemPanel.Visible = false;
+            
             // 
             // label2
             // 
