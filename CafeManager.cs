@@ -284,5 +284,19 @@ namespace CafeManagement
             conn.Close();
 
         }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Manage_Employees manage_Employees = new Manage_Employees();
+            manage_Employees.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ManageMenu mm = new ManageMenu();
+            this.Hide();
+            mm.Show();
+        }
     }
 }

@@ -49,16 +49,6 @@ namespace CafeManagement
             string fName = Fname.Text, lName = LName.Text, username = usernameTxt.Text, password = passwordTxt.Text, phone = phoneTxt.Text;
             string reEnter = reEnterPassword.Text;
             string type = comboBox1.Text;
-            String roleQuery = "Select top 1 userID from Users order by userID desc";
-            String userInsert = "Insert into Users(username,password,role) values (@roleUsername,@rolePassword,@roleRole)";
-            conn.Open();
-            cm = new SqlCommand(roleQuery, conn);
-
-            int userid = Convert.ToInt32(cm.ExecuteScalar());
-            userid++;
-
-            conn.Close();
-            DateTime date = DateTime.Today;
             if (password != reEnter)
             {
                 MessageBox.Show("Passwords do not match", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
@@ -67,196 +57,122 @@ namespace CafeManagement
             }
             else
             {
-               
+
+                String roleQuery = "Select top 1 userID from Users order by userID desc";
+                String userInsert = "Insert into Users(username,password,role) values (@roleUsername,@rolePassword,@roleRole)";
+                conn.Open();
+
+
+                cm = new SqlCommand(roleQuery, conn);
+                int userid = Convert.ToInt32(cm.ExecuteScalar());
+                userid++;
+
+                String queryUser = "Select * from Users Where username = @user";
+                cm = new SqlCommand(queryUser, conn);
+                cm.Parameters.AddWithValue("@user", username);
+                SqlDataReader dr = cm.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    MessageBox.Show("Username already exists. Please try again.", "Failure", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    passwordTxt.Clear();
+                    reEnterPassword.Clear();
+                    dr.Close();
+                }
+                else
+                {
+                    dr.Close();
+                    cm = new SqlCommand(userInsert, conn);
+                    cm.Parameters.AddWithValue("@userID", userid);
+                    cm.Parameters.AddWithValue("@roleUsername", username);
+                    cm.Parameters.AddWithValue("@rolePassword", password);
+                    cm.Parameters.AddWithValue("@roleRole", type);
+                    int rowsAffected = cm.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Congratulations, your account has been successfully created.", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registration failed. Please try again.", "Failure", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    }
+                    conn.Close();
+                }
+
+                DateTime date = DateTime.Today;
+
                 if (type == "Cashier")
                 {
                     conn.Open();
-                    String queryUser = "Select * from Cashier Where username = @user";
-                    cm = new SqlCommand(queryUser, conn);
+
+
+
+                    String queryInsert = "Insert into Cashier(FName,LName,PhoneNo,CManagerID,username,password,HireDate,userID) values (@fname,@lname,@phone,null,@user,@pass,@date,@userID)";
+
+                    cm = new SqlCommand(queryInsert, conn);
+                    cm.Parameters.AddWithValue("@fname", fName);
+                    cm.Parameters.AddWithValue("@lname", lName);
+                    cm.Parameters.AddWithValue("@phone", phone);
                     cm.Parameters.AddWithValue("@user", username);
-                    SqlDataReader dr = cm.ExecuteReader();
-                    if (dr.HasRows)
-                    {
-                        MessageBox.Show("Username already exists. Please try again.", "Failure", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                        passwordTxt.Clear();
-                        reEnterPassword.Clear();
-                    }
-                    else
-                    {
-                        dr.Close();
-                        String query = "SELECT TOP 1 CashierID FROM Cashier ORDER BY CashierID DESC";
-                        cm = new SqlCommand(query, conn);
-                        int id = Convert.ToInt32(cm.ExecuteScalar());
-                        Console.Write(id);
-                        id++;
-                        
-
-
-                        String queryInsert = "Insert into Cashier(FName,LName,PhoneNo,CManagerID,username,password,HireDate) values (@fname,@lname,@phone,null,@user,@pass,@date)";
-                        
-                        cm = new SqlCommand(queryInsert, conn);
-                        cm.Parameters.AddWithValue("@cashID", id);
-                        cm.Parameters.AddWithValue("@fname", fName);
-                        cm.Parameters.AddWithValue("@lname", lName);
-                        cm.Parameters.AddWithValue("@phone", phone);
-                        cm.Parameters.AddWithValue("@user", username);
-                        cm.Parameters.AddWithValue("@pass", password);
-                        cm.Parameters.AddWithValue("@date", date);
-
-
-                        int rowsAffected = cm.ExecuteNonQuery();
-
-                      
-                        cm = new SqlCommand(userInsert, conn);
-                        cm.Parameters.AddWithValue("@userID", userid);
-                        cm.Parameters.AddWithValue("@roleUsername", username);
-                        cm.Parameters.AddWithValue("@rolePassword", password);
-                        cm.Parameters.AddWithValue("@roleRole", type);
-                        rowsAffected = cm.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Congratulations, your account has been successfully created.", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Registration failed. Please try again.", "Failure", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                        }
-
-
-
-                        Login login = new Login();
-                        this.Hide();
-                        login.Show();
-                        dr.Close();
-                        conn.Close();
-                    }
+                    cm.Parameters.AddWithValue("@pass", password);
+                    cm.Parameters.AddWithValue("@date", date);
+                    cm.Parameters.AddWithValue("@userID", userid);
+                    cm.ExecuteNonQuery();
+                    Login login = new Login();
+                    this.Hide();
+                    login.Show();
+                    dr.Close();
+                    conn.Close();
                 }
+
                 else if (type == "Customer")
                 {
                     conn.Open();
+                    dr.Close();
 
-                    String queryUser = "Select * from Customer Where username = @user";
-                    cm = new SqlCommand(queryUser, conn);
+
+                    String queryInsert = "Insert into Customer(FName,LName,username,password,LoyaltyPoints,RegisterationDate,OrderID,userID) values (@fname,@lname,@user,@pass,null,@date,null,@userID)";
+                    cm = new SqlCommand(queryInsert, conn);
+                    cm.Parameters.AddWithValue("@fname", fName);
+                    cm.Parameters.AddWithValue("@lname", lName);
                     cm.Parameters.AddWithValue("@user", username);
-                    SqlDataReader dr = cm.ExecuteReader();
-                    if (dr.HasRows)
-                    {
-                        MessageBox.Show("Username already exists. Please try again.", "Failure", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                        passwordTxt.Clear();
-                        reEnterPassword.Clear();
-                    }
-                    else
-                    {
-                        dr.Close();
-                        String query = "SELECT TOP 1 customerId FROM Customer ORDER BY customerId DESC";
-                        cm = new SqlCommand(query, conn);
-                        int id = Convert.ToInt32(cm.ExecuteScalar());
-                        Console.Write(id);
-                        id++;
+                    cm.Parameters.AddWithValue("@pass", password);
+                    cm.Parameters.AddWithValue("@date", date);
+                    cm.Parameters.AddWithValue("@userID", userid);
 
+                    int rowsAffected = cm.ExecuteNonQuery();
 
-                        String queryInsert = "Insert into Customer(FName,LName,username,password,LoyaltyPoints,RegisterationDate,OrderID) values (@fname,@lname,@user,@pass,null,@date,null)";
-                        cm = new SqlCommand(queryInsert, conn);
-                        cm.Parameters.AddWithValue("@custId", id);
-                        cm.Parameters.AddWithValue("@fname", fName);
-                        cm.Parameters.AddWithValue("@lname", lName);
-                        cm.Parameters.AddWithValue("@user", username);
-                        cm.Parameters.AddWithValue("@pass", password);
-                        cm.Parameters.AddWithValue("@date", date);
-
-
-                        int rowsAffected = cm.ExecuteNonQuery();
-
-
-                        cm = new SqlCommand(userInsert, conn);
-                        cm.Parameters.AddWithValue("@userID", userid);
-                        cm.Parameters.AddWithValue("@roleUsername", username);
-                        cm.Parameters.AddWithValue("@rolePassword", password);
-                        cm.Parameters.AddWithValue("@roleRole", type);
-                        rowsAffected = cm.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Congratulations, your account has been successfully created.", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Registration failed. Please try again.", "Failure", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                        }
-                        Login login = new Login();
-                        this.Hide();
-                        login.Show();
-                        dr.Close();
-                        conn.Close();
-
-                    }
+                    Login login = new Login();
+                    this.Hide();
+                    login.Show();
+                    dr.Close();
+                    conn.Close();
 
                 }
                 else if (type == "Inventory Manager")
                 {
                     conn.Open();
 
-                    String queryUser = "Select * from InventoryManager Where username = @user";
-                    cm = new SqlCommand(queryUser, conn);
+
+                    dr.Close();
+                    String queryInsert = "Insert into InventoryManager(FName,LName,PhoneNo,HireDate,CManagerID,InventoryID,username,password,userID) values (@fname,@lname,@phone,@date,null,null,@user,@pass,@userID)";
+                    cm = new SqlCommand(queryInsert, conn);
+                    cm.Parameters.AddWithValue("@fname", fName);
+                    cm.Parameters.AddWithValue("@lname", lName);
                     cm.Parameters.AddWithValue("@user", username);
-                    SqlDataReader dr = cm.ExecuteReader();
-                    if (dr.HasRows)
-                    {
-                        MessageBox.Show("Username already exists. Please try again.", "Failure", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                        passwordTxt.Clear();
-                        reEnterPassword.Clear();
-                    }
-                    else
-                    {
-                        dr.Close();
-                        String query = "SELECT TOP 1 InvManagerID FROM InventoryManager ORDER BY InvManagerID DESC";
-                        cm = new SqlCommand(query, conn);
-                        int id = Convert.ToInt32(cm.ExecuteScalar());
-                        Console.Write(id);
-                        id++;
+                    cm.Parameters.AddWithValue("@pass", password);
+                    cm.Parameters.AddWithValue("@date", date);
+                    cm.Parameters.AddWithValue("@phone", phone);
+                    cm.Parameters.AddWithValue("@userID", userid);
+                    int rowsAffected = cm.ExecuteNonQuery();
 
+                    Login login = new Login();
+                    this.Hide();
+                    login.Show();
+                    dr.Close();
+                    conn.Close();
 
-                        String queryInsert = "Insert into InventoryManager(FName,LName,PhoneNo,HireDate,CManagerID,InventoryID,username,password) values (@fname,@lname,@phone,@date,null,null,@user,@pass)";
-                        cm = new SqlCommand(queryInsert, conn);
-                        cm.Parameters.AddWithValue("@InvMgrID", id);
-                        cm.Parameters.AddWithValue("@fname", fName);
-                        cm.Parameters.AddWithValue("@lname", lName);
-                        cm.Parameters.AddWithValue("@user", username);
-                        cm.Parameters.AddWithValue("@pass", password);
-                        cm.Parameters.AddWithValue("@date", date);
-                        cm.Parameters.AddWithValue("@phone", phone);
-
-
-                        int rowsAffected = cm.ExecuteNonQuery();
-
-
-                        cm = new SqlCommand(userInsert, conn);
-                        cm.Parameters.AddWithValue("@userID", userid);
-                        cm.Parameters.AddWithValue("@roleUsername", username);
-                        cm.Parameters.AddWithValue("@rolePassword", password);
-                        cm.Parameters.AddWithValue("@roleRole", type);
-                        rowsAffected = cm.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Congratulations, your account has been successfully created.", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Registration failed. Please try again.", "Failure", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                        }
-
-                        Login login = new Login();
-                        this.Hide();
-                        login.Show();
-                        dr.Close();
-                        conn.Close();
-                    }
 
                 }
-
-
             }
         }
 

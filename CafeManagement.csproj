@@ -89,6 +89,18 @@
     <Compile Include="InventoryManager.Designer.cs">
       <DependentUpon>InventoryManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Employees.Designer.cs">
+      <DependentUpon>Manage Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageMenu.Designer.cs">
+      <DependentUpon>ManageMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +168,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Employees.resx">
+      <DependentUpon>Manage Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageMenu.resx">
+      <DependentUpon>ManageMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
