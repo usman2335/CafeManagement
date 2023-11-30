@@ -39,7 +39,9 @@ namespace CafeManagement
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            ContactUs contactUs = new ContactUs();
+            this.Hide();
+            contactUs.Show();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -84,8 +86,35 @@ namespace CafeManagement
         }
         public string _textBox
         {
-            set {label2.Text = value;}
+            set { label2.Text = value; }
         }
 
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+            Menu form = new Menu();
+            this.Hide();
+            form.Show();
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+            ContactUs form = new ContactUs(); 
+            this.Hide();
+            form.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            AboutUs form = new AboutUs();
+            this.Hide(); 
+            form.Show();
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+            AboutUs form = new AboutUs();
+            this.Hide();
+            form.Show();
+        }
     }
 }

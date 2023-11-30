@@ -110,14 +110,14 @@ namespace CafeManagement
                 }
                 else
                 {
-                    MessageBox.Show("Product couldn't be added. Please try again.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Product couldn't be added. Please try again.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     productName.Clear();
                     productPrice.Clear();
                 }
             }
             else
             {
-                MessageBox.Show("Product already exists.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Product already exists.", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 productName.Clear();
                 productPrice.Clear();
                 

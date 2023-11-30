@@ -93,6 +93,36 @@ namespace CafeManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap E {
+            get {
+                object obj = ResourceManager.GetObject("E", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap email {
+            get {
+                object obj = ResourceManager.GetObject("email", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap email_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("email-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap estudio_bloom_92HwFhCp_MQ_unsplash {
             get {
                 object obj = ResourceManager.GetObject("estudio-bloom-92HwFhCp-MQ-unsplash", resourceCulture);
@@ -136,6 +166,16 @@ namespace CafeManagement.Properties {
         internal static System.Drawing.Bitmap hans_vivek_uhS6_xCNE8A_unsplash {
             get {
                 object obj = ResourceManager.GetObject("hans-vivek-uhS6_xCNE8A-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Instagram_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Instagram-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
