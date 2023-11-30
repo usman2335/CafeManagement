@@ -288,7 +288,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::CafeManagement.Properties.Resources.icons8_back_100;
+//            this.pictureBox2.Image = global::CafeManagement.Properties.Resources.icons8_back_100;
             this.pictureBox2.Location = new System.Drawing.Point(25, 123);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 29);

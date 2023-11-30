@@ -7,18 +7,22 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static CafeManagement.Login;
 
 namespace CafeManagement
 {
     public partial class Menu : Form
     {
+
         public Menu()
         {
             InitializeComponent();
             BG_panel.Hide();
         }
+
         SqlConnection conn = DBConnecction.OpenConnection();
         SqlCommand cm = new SqlCommand();
 
@@ -79,9 +83,17 @@ namespace CafeManagement
             DataTable table = new DataTable();
 
             table.Load(reader);
-            dataGridView1.DataSource = table;
+            MenuGrid.DataSource = table;
 
-            
+            NameList.Items.Clear();
+            int count = MenuGrid.RowCount;
+
+            for (int i = 0; i < count - 1; i++)
+            {
+                NameList.Items.Add(MenuGrid.Rows[i].Cells[0].Value.ToString());
+            }
+
+
 
             reader.Close();
             conn.Close();
@@ -101,7 +113,17 @@ namespace CafeManagement
             SqlDataReader reader = cm.ExecuteReader();
             DataTable table = new DataTable(); 
             table.Load(reader);
-            dataGridView1.DataSource = table;
+            MenuGrid.DataSource = table;
+
+            int count = MenuGrid.RowCount;
+
+            NameList.Items.Clear();
+
+            for(int i =0;i<count-1;i++)
+            {
+                NameList.Items.Add(MenuGrid.Rows[i].Cells[0].Value.ToString());
+            }
+            
 
             reader.Close();
             conn.Close();
@@ -109,36 +131,90 @@ namespace CafeManagement
 
         private void AddC_button_Click(object sender, EventArgs e)
         {
+            conn.Open();
+            string menuItem = NameList.SelectedItem.ToString();
+
+            string priceQuery = "select ItemPrice from menu where ProductID = (select ProductID from Product where ProductName = @name)";
+            cm = new SqlCommand(priceQuery, conn);
+            cm.Parameters.AddWithValue("@name", menuItem);
+            int price = Convert.ToInt32(cm.ExecuteScalar());
+
+            if(QtyNum.Value > 0)
+            {
+                
+                CartGrid.Rows[CartGrid.Rows.Count - 1].Cells[0].Value = menuItem;
+                CartGrid.Rows[CartGrid.Rows.Count - 1].Cells[1].Value = price;
+                CartGrid.Rows[CartGrid.Rows.Count - 1].Cells[2].Value = QtyNum.Value;
+                CartGrid.Rows.Add();
+
+            }
+
+
+
+            conn.Close();
+        
+    }
+
+        private void QtyNum_ValueChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            string menuItem = NameList.SelectedItem.ToString();
+            string priceQuery = "select ItemPrice from menu where ProductID = (select ProductID from Product where ProductName = @name)";
+            cm = new SqlCommand(priceQuery, conn);
+            cm.Parameters.AddWithValue("@name", menuItem);
+
+            int price = Convert.ToInt32(cm.ExecuteScalar());
+
+            int total = Convert.ToInt32(QtyNum.Value) * price;
+
+            PriceTxt.Text = total.ToString();
+
+            conn.Close();
+        }
+
+        private void MenuGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
-        private void AddToTextBox(int changeBy)
+        private void BG_panel_Paint(object sender, PaintEventArgs e)
         {
-            int value;
-            if (int.TryParse(Qtty_Box.Text, out value))
-            {
-                value = value + changeBy;
-                Qtty_Box.Text = value.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Invalid Integer in TextBox!");
-            }
+
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddToTextBox(1);
+            PriceTxt.Clear();
+            QtyNum.Value = 0;
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string input = Qtty_Box.Text;
-            if (int.TryParse(input, out int quantity))
+
+        }
+
+        private void ViewBtn_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            int custID = SharedData.PassedVariable;
+            DateTime today = DateTime.Now;
+            string placeOrderQuery = "insert into Orders values (@total,@date,@id)";
+            cm = new SqlCommand(placeOrderQuery, conn);
+            cm.Parameters.AddWithValue("@total", totalTxt.Text);
+            cm.Parameters.AddWithValue("@date", today);
+            cm.Parameters.AddWithValue("@id", custID);
+
+            int rows = cm.ExecuteNonQuery();
+            if(rows > 0)
             {
-                if(quantity > 0)
-                    AddToTextBox(-1);
+                MessageBox.Show("Order Placed!");
             }
+
+
+            
+
+
         }
     }
 }

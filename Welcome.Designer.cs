@@ -119,7 +119,7 @@
             // logo
             // 
             this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.logo.Image = global::CafeManagement.Properties.Resources.Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview;
+//            this.logo.Image = global::CafeManagement.Properties.Resources.Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview;
             this.logo.Location = new System.Drawing.Point(48, 44);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(304, 260);

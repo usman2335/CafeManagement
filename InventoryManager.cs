@@ -183,5 +183,39 @@ namespace CafeManagement
             this.RemoveBtn.BackColor = System.Drawing.Color.FromArgb(100, 10, 50);
             this.RemoveBtn.ForeColor = System.Drawing.Color.Snow;
         }
+
+        private void quantityTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void AddToTextBox(int changeBy)
+        {
+            int value;
+            if (int.TryParse(quantityTxt.Text, out value))
+            {
+                value = value + changeBy;
+                quantityTxt.Text = value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Integer in TextBox!");
+            }
+        }
+
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            AddToTextBox(1);
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            string input = quantityTxt.Text;
+            if (int.TryParse(input, out int quantity))
+            {
+                if (quantity > 0)
+                    AddToTextBox(-1);
+            }
+        }
     }
 }

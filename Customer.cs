@@ -66,7 +66,7 @@ namespace CafeManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PlaceOrder form = new PlaceOrder();
+            Menu form = new Menu();
             this.Hide();
             form.Show();
         }
@@ -115,6 +115,13 @@ namespace CafeManagement
             AboutUs form = new AboutUs();
             this.Hide();
             form.Show();
+        }
+
+        private void viewPastBtn_Click(object sender, EventArgs e)
+        {
+            PastOrders po = new PastOrders();
+            this.Hide();
+            po.Show();
         }
     }
 }

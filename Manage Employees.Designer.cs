@@ -313,7 +313,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::CafeManagement.Properties.Resources.icons8_back_100;
+//            this.pictureBox2.Image = global::CafeManagement.Properties.Resources.icons8_back_100;
             this.pictureBox2.Location = new System.Drawing.Point(26, 107);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 29);
@@ -324,7 +324,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CafeManagement.Properties.Resources.Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview1;
+            //this.pictureBox1.Image = global::CafeManagement.Properties.Resources.Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(129, 89);

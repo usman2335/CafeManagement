@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
 namespace CafeManagement
 {
     public partial class Login : Form
@@ -22,6 +23,11 @@ namespace CafeManagement
         }
         SqlConnection conn = DBConnecction.OpenConnection();
         SqlCommand cm = new SqlCommand();
+
+        public static class SharedData
+        {
+            public static int PassedVariable { get; set; }
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -37,6 +43,10 @@ namespace CafeManagement
         {
 
         }
+        private void OpenForm2Button_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void createAccountBtn_Click(object sender, EventArgs e)
         {
@@ -49,15 +59,23 @@ namespace CafeManagement
             string role = Convert.ToString(cm.ExecuteScalar());
             cm = new SqlCommand(query, conn);
             SqlDataReader dr = cm.ExecuteReader();
-           // cm = new SqlCommand(customerNameQuery, conn);
+
+            
+
+            // cm = new SqlCommand(customerNameQuery, conn);
             //string custName = Convert.ToString(cm.ExecuteScalar());
 
 
 
-            if(dr.HasRows)
+            if (dr.HasRows)
             {
                 if(role == "Customer")
                 {
+                    dr.Close();
+                    string getID = "select CustomerID from Customer where username = @name";
+                    cm = new SqlCommand(getID, conn);
+                    cm.Parameters.AddWithValue("@name", username);
+                    SharedData.PassedVariable = Convert.ToInt32(cm.ExecuteScalar());
 
                     Customer customer = new Customer();
                     customer._textBox = "Welcome, "+ _textBox1;
@@ -66,12 +84,14 @@ namespace CafeManagement
                 }
                 else if(role == "Cashier")
                 {
+                    dr.Close();
                     Cashier cashier = new Cashier();
                     this.Close();
                     cashier.Show();
                 }
                 else if(role == "Inventory Manager")
                 {
+                    dr.Close();
                     InventoryManager invManager = new InventoryManager();
                     this.Close();
                     invManager.Show();
@@ -79,6 +99,7 @@ namespace CafeManagement
 
                 else if(role == "Admin")
                 {
+                    dr.Close();
                     CafeManager cafeManager = new CafeManager();
                     this.Hide();
                     cafeManager.Show();

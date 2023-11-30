@@ -80,7 +80,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CafeManagement.Properties.Resources.Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview1;
+//            this.pictureBox1.Image = global::CafeManagement.Properties.Resources.Brown_Simple_Round_Badge_Coffee_Shop_Logo_removebg_preview_removebg_preview1;
             this.pictureBox1.Location = new System.Drawing.Point(0, -14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(129, 89);
@@ -158,7 +158,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::CafeManagement.Properties.Resources.E;
+//            this.pictureBox3.Image = global::CafeManagement.Properties.Resources.E;
             this.pictureBox3.Location = new System.Drawing.Point(52, 189);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(80, 64);
@@ -168,7 +168,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::CafeManagement.Properties.Resources.Instagram_removebg_preview;
+//            this.pictureBox2.Image = global::CafeManagement.Properties.Resources.Instagram_removebg_preview;
             this.pictureBox2.Location = new System.Drawing.Point(42, 54);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(99, 84);
